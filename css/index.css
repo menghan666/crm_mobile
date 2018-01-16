@@ -243,6 +243,7 @@ table {
 	overflow: hidden;
 	display: none;
 	padding: 20px 0;
+	margin-bottom: 40px;
 }
 .pane ul.pa-ul li{
 	width:50%;
@@ -306,6 +307,31 @@ table {
 	left: 45%;
 }
 .close-btn img{
-	width:100%;
+	width:80%;
 	
+}
+footer{
+	width:100%;
+	height: 50px;
+	max-width: 750px;
+	margin: 0 auto;
+	border-top: 1px solid #e5e5e5;
+	position: fixed;
+	bottom: 0;
+	background: #fff;
+}
+footer ul li{
+	width:25%;
+	float: left;
+	text-align: center;
+}
+footer ul li img{
+	width:25%;
+	margin-top: 3px;
+}
+footer ul li a.li-a p{
+	color: #125da3;
+}
+footer ul li a p{
+	font-size: 11px;
 }
