@@ -4,8 +4,10 @@
 		<meta charset="UTF-8">
 		<title>审批中心</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<link rel="stylesheet" href="css/mui.min.css" />
+		<link rel="stylesheet" href="css/mui.min.css" />	
+		<link href="css/reset.css" rel="stylesheet" />
 		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/data.css" />
 		<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
 		<script type="text/javascript">
 			$(function(){	
@@ -17,26 +19,32 @@
 		</script>
 	</head>
 	<body style="background: #fff;">
-		<header class="index-top">
-			<div class="in-lefta">
-				<a href="#">
-					<img src="img/nav_fh.png" />
-					返回
+		<div class="header_box mui-row">
+			<div class="nav_back mui-col-xs-3 mui-col-sm-3 clearfix">
+				<a href="#" class="clearfix">
+					<img class="float_lf" src="img/back.png" alt="" />
+					<span class="float_lf">返回</span>
 				</a>
 			</div>
-			<p>审批中心</p>
-			<div class="in-right in-righta">
-				<div class="ra-r">
-					<a href="#">
-						<img src="img/e-mail.png" />
-						<span>10</span>
-					</a>
-				</div>
+			<div class="nav_title mui-col-xs-6 mui-col-sm-6">审批中心</div>
+			<div class="nav_list mui-col-xs-3 mui-col-sm-3 clearfix">
+				<a href="#" class="news_btn float_lf">
+					<span>10</span>
+					<img src="img/e-mail.png" alt="" />
+				</a>
+				<a href="#" class="meau_dian float_rt"><img src="img/dian.png"/></a>
 			</div>
-			<div class="nav-a">
-				<img src="img/nav_none.png" />
-			</div>
-		</header>
+			<!--隐藏菜单-->
+			<ul class="muea_box" style="display: none;">
+				<li><a href="#">首页</a></li>
+				<li><a href="#">线索</a></li>
+				<li><a href="#">客户</a></li>
+				<li><a href="#">商机</a></li>
+				<li><a href="#">订单</a></li>
+				<li><a href="#">财务</a></li>
+				<li><a href="#">站内消息 <span class="news_dian"></span></a></li>
+			</ul>
+		</div>
 		<div class="sp-con">
 			<ul class="sp-ul">
 				<li class="li-hit">待审批的合同</li>
@@ -217,5 +225,14 @@
 				</div>
 			</div>
 		</div>
+		<script>
+			$(".meau_dian").click(function(){
+				if($(".muea_box").css("display")=="none"){
+					$(".muea_box").show();
+				}else{
+					$(".muea_box").hide();
+				}
+			});
+		</script>
 	</body>
 </html>

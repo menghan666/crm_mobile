@@ -1,7 +1,7 @@
 body{ 
 	margin:0 auto; 
 	font-family: "Microsoft YaHei", "SimSun"; 
-	font-size: 1.0rem;
+	font-size: 0.85rem;
 	}
 *{ 
 	padding:0px; 
@@ -179,7 +179,7 @@ table {
 	font-size: 0.8rem;
 }
 .index-top .in-right img{
-	width:30%;
+	width:30px;
 }
 .index-nav{
 	width:100%;
