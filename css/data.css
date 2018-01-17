@@ -1,0 +1,137 @@
+.header_box {
+	width: 100%;
+	max-width: 750px;
+	margin: 0 auto;
+	height: 50px;
+	background-color: #125da3;
+}
+.header_box .nav_back{
+	height: 100%;
+}
+.header_box .nav_back a{
+	display: block;
+	width: 72px;
+	height: 100%;
+	box-sizing: border-box;
+	padding: 10px;
+}
+.header_box .nav_back a img{
+	display: block;
+	height: 22px;
+	margin-top: 4px;
+}
+.header_box .nav_back a span{
+	display: block;
+	margin-left: 5px;
+	font-size: 16px;
+	color:#fff;
+	margin-top: 4px;
+}
+.nav_title{
+	height: 100%;
+	text-align: center;
+	font-size: 18px;
+	color:#fff;
+	padding: 14px 0;
+}
+.nav_list{
+	height: 100%;
+}
+.nav_list .news_btn{
+	display: block;
+	height: 100%;
+	padding: 16px 0;
+	position: relative;
+}
+.nav_list .news_btn span{
+	display: block;
+	width: 20px;
+	height: 20px;
+	color:#fff;
+	font-size: 12px;
+	text-align: center;
+	position: absolute;
+	top:5px;
+	left:18px;
+	background-color: #CF2D28;
+	border-radius: 50%;
+}
+.nav_list .news_btn img{
+	display: block;
+	height: 100%;
+}
+.nav_list .meau_dian{
+	display: block;
+	height: 100%;
+	padding-top: 22px;
+	margin-right: 15px;
+}
+.nav_list .meau_dian img{
+	width: 26px;
+}
+
+.shai_xuan{
+	width: 100%;
+	max-width: 750px;
+	margin: 0 auto;
+	height: 60px;
+	background-color: #f8f8f8;
+}
+.shai_xuan ul{
+	height: 100%;
+}
+.shai_xuan ul li{
+	width: 20%;
+	float: left;
+	height: 100%;
+	display: block;
+	font-size: 14px;
+	position: relative;
+}
+.shai_xuan ul li:first-child{
+	font-size: 16px;
+}
+.shai_xuan ul li img{
+	width: 10px;
+	margin: 26px 0 0 5px;
+}
+.shai_xuan ul li span{
+	margin-top: 18px;
+}
+.shai_xuan ul li:first-child{
+	width: 40%;
+}
+.shai_xuan ul li:first-child img{
+	width: 40px;
+	margin-top: 10px;
+}
+.shai_xuan ul li:first-child span{
+	margin: 18px 0 0 10px;
+}
+.down_alert{
+	display: none;
+	position: absolute;
+	top: 35px;
+    left: -44px;
+	z-index: 100;
+	padding: 20px 10px;
+	background: url(../img/alert_bg.png) center no-repeat;
+	background-size: 100% 100%;
+}
+.down_alert a{
+	display: block;
+	width: 100px;
+	text-align: center;
+	padding-top: 10px;
+	margin: 0;
+	color:#333;
+	font-size: 14px;
+}
+
+.rotate_act{
+	transform:rotate(180deg);
+	-ms-transform:rotate(180deg); 	/* IE 9 */
+	-moz-transform:rotate(180deg); 	/* Firefox */
+	-webkit-transform:rotate(180deg); /* Safari 和 Chrome */
+	-o-transform:rotate(180deg); 	/* Opera */
+}
