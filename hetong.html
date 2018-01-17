@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>数据</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/reset.css" rel="stylesheet" />
+		<link href="css/data.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/new_file.css" />
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	</head>
+
+	<body>
+		<!--顶部-->
+		<div class="header_box mui-row">
+			<div class="nav_back mui-col-xs-3 mui-col-sm-3 clearfix">
+				<a href="#" class="clearfix">
+					<img class="float_lf" src="img/back.png" alt="" />
+					<span class="float_lf">返回</span>
+				</a>
+			</div>
+			<div class="nav_title mui-col-xs-6 mui-col-sm-6">数据</div>
+			<div class="nav_list mui-col-xs-3 mui-col-sm-3 clearfix">
+				<a href="#" class="news_btn float_lf">
+					<span>10</span>
+					<img src="img/e-mail.png" alt="" />
+				</a>
+				<a href="#" class="meau_dian float_rt"><img src="img/dian.png"/></a>
+			</div>
+		</div>
+		<div class="tabPanel">
+			<ul>
+				<li class="hit">基本信息</li>
+				<li>产品</li>
+	            <li>附件</li>
+			</ul>
+			<div class="panes">
+				<div class="pane" style="display:block;">
+					<table class="table">
+					  <tr>
+					    <td class="td1">合同标题</td>
+					    <td class="td">百度百科修改【贾云海】</td>
+					  </tr>
+					  <tr>
+					    <td class="td1">对应客户</td>
+					    <td class="td">上海晓乎文化传播有限公司</td>
+					  </tr>
+					  <tr>
+					    <td class="td1">对应商机</td>
+					    <td class="td">百度百科修改【贾云海】</td>
+					  </tr>
+					  <tr>
+					    <td class="td1">合同总金额</td>
+					    <td class="td">¥1,000.00</td>
+					  </tr>
+					  <tr>
+					    <td class="td1">合同开始日期</td>
+					    <td class="td">2017-06-28</td>
+					  </tr>
+					  <tr>
+					    <td class="td1">合同结束日期</td>
+					    <td class="td">2017-07-28</td>
+					  </tr>
+					  <tr>
+					    <td class="td1">已开票金额</td>
+					    <td class="td">¥0.00</td>
+					  </tr>
+					  <tr>
+					    <td class="td1">已回款金额</td>
+					    <td class="td">¥0.00</td>
+					  </tr>
+					  <tr>
+					    <td class="td1">未回款金额</td>
+					    <td class="td">¥1,000.00</td>
+					  </tr>
+					  <tr>
+					    <td class="td1">未开票金额</td>
+					    <td class="td">¥1,000.00</td>
+					  </tr>
+					  <tr>
+					    <td class="td1">合同状态</td>
+					    <td class="td">未审批</td>
+					  </tr>
+					</table>
+				</div>
+				<div class="pane" style="padding: 20px 0;">
+					<div class="product">
+						<ul>
+							<li><span>产品名</span><span>金额</span><span>类别</span></li>
+							<li><p>百度百科创建</p><p>500.00</p><p>自媒体</p></li>
+							<li><p>搜狗新闻</p><p>1500.00</p><p>新闻</p></li>
+							<li><p>百度百科创建</p><p>500.00</p><p>自媒体</p></li>
+						</ul>
+					</div>
+				</div>
+	            <div class="pane" style="padding: 20px 0;">
+	            	<div class="fujian">
+						<ul>
+							<li><span>文件名</span><span>添加时间</span></li>
+							<li><a href="#">中搜-1月12日.xlsx</a><p>2018-01-15 3:09:06</p></li>
+							<li><a href="#">中搜-1月12日.xlsx</a><p>2018-01-15 3:09:06</p></li>
+							<li><a href="#">中搜-1月12日.xlsx</a><p>2018-01-15 3:09:06</p></li>
+						</ul>
+					</div>
+	            </div>
+			</div>
+		</div>
+		<footer>
+        	<div class="foot">
+        		<div class="footer_left">
+                	<a href="#">审批否决</a>
+                </div>
+                <div class="footer_left" style="background: #125DA3;">
+                	<a href="#" style="color: #fff;">审批通过</a>
+                </div>
+            </div>
+        </footer>
+		<script src="js/mui.min.js"></script>
+		<script src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript">
+			$(function(){	
+				$('.tabPanel ul li').click(function(){
+					$(this).addClass('hit').siblings().removeClass('hit');
+					$('.panes>div:eq('+$(this).index()+')').show().siblings().hide();
+				})
+			})
+		</script>
+		<script type="text/javascript">
+		$(document).ready(function(){
+			var H = $(window).height();
+			$(".panes").height(H-95);
+		});
+		</script>
+		
+	</body>
+
+</html>
