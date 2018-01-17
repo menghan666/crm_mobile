@@ -28,6 +28,16 @@
 				</a>
 				<a href="#" class="meau_dian float_rt"><img src="img/dian.png"/></a>
 			</div>
+			<!--隐藏菜单-->
+			<ul class="muea_box" style="display: none;">
+				<li><a href="#">首页</a></li>
+				<li><a href="#">线索</a></li>
+				<li><a href="#">客户</a></li>
+				<li><a href="#">商机</a></li>
+				<li><a href="#">订单</a></li>
+				<li><a href="#">财务</a></li>
+				<li><a href="#">站内消息 <span class="news_dian"></span></a></li>
+			</ul>
 		</div>
 		<!--logo 销售数据下拉框-->
 		<div class="shai_xuan">
@@ -81,6 +91,14 @@
 		<script src="js/mui.min.js"></script>
 		<script type="text/javascript">
 			mui.init()
+			
+			$(".meau_dian").click(function(){
+				if($(".muea_box").css("display")=="none"){
+					$(".muea_box").show();
+				}else{
+					$(".muea_box").hide();
+				}
+			});
 			
 			$(".shai_xuan ul").on("click","li",function(){
 				if($(this).find(".down_alert").css("display")=="none"){

@@ -4,6 +4,7 @@
 	margin: 0 auto;
 	height: 50px;
 	background-color: #125da3;
+	position: relative;
 }
 .header_box .nav_back{
 	height: 100%;
@@ -26,6 +27,37 @@
 	font-size: 16px;
 	color:#fff;
 	margin-top: 4px;
+}
+.muea_box{
+	position: absolute;
+	top:28px;
+	right:0;
+	z-index: 100;
+	display: block;
+	width: 150px;
+	padding: 20px 10px;
+	background: url(../img/cai_dan.png) center no-repeat;
+	background-size:100% 100%;
+}
+.muea_box li{
+	display: block;
+	text-align: center;
+	padding: 10px 0;
+	border-top: 1px solid #e5e5e5;
+	position: relative;
+}
+.muea_box li:first-child{
+	border:none;
+}
+.muea_box li .news_dian{
+	display: block;
+	position: absolute;
+	top:12px;
+	right:21%;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background-color: #CF2D28;
 }
 .nav_title{
 	height: 100%;
