@@ -8,9 +8,11 @@
 		<link href="css/mui.min.css" rel="stylesheet" />
 		<link href="css/reset.css" rel="stylesheet" />
 		<link href="css/data.css" rel="stylesheet" />
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
 	</head>
 
 	<body>
+		<!--顶部-->
 		<div class="header_box mui-row">
 			<div class="nav_back mui-col-xs-3 mui-col-sm-3 clearfix">
 				<a href="#" class="clearfix">
@@ -27,7 +29,7 @@
 				<a href="#" class="meau_dian float_rt"><img src="img/dian.png"/></a>
 			</div>
 		</div>
-		
+		<!--logo 销售数据下拉框-->
 		<div class="shai_xuan">
 			<ul class="clearfix">
 				<li class="clearfix">
@@ -39,37 +41,70 @@
 					<img class="float_lf" src="img/down.png" alt="" />
 					<!--弹框-->
 					<div class="down_alert">
-						<p>今天</p>
-						<p>本周</p>
-						<p>本月</p>
-						<p>本季</p>
-						<p>本年</p>
+						<a href="#">今天</a>
+						<a href="#">本周</a>
+						<a href="#">本月</a>
+						<a href="#">本季</a>
+						<a href="#">本年</a>
 					</div>
 				</li>
 				<li class="clearfix">
 					<span class="float_lf">部门</span>
 					<img class="float_lf" src="img/down.png" alt="" />
+					<!--弹框-->
+					<div class="down_alert">
+						<a href="#">今天</a>
+						<a href="#">本周</a>
+						<a href="#">本月</a>
+						<a href="#">本季</a>
+						<a href="#">本年</a>
+					</div>
 				</li>
 				<li class="clearfix">
 					<span class="float_lf">自己</span>
 					<img class="float_lf" src="img/down.png" alt="" />
+					<!--弹框-->
+					<div class="down_alert">
+						<a href="#">今天</a>
+						<a href="#">本周</a>
+						<a href="#">本月</a>
+						<a href="#">本季</a>
+						<a href="#">本年</a>
+					</div>
 				</li>
 			</ul>
 		</div>
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		<!---->
 		
 		
 		<script src="js/mui.min.js"></script>
 		<script type="text/javascript">
 			mui.init()
+			
+			$(".shai_xuan ul").on("click","li",function(){
+				if($(this).find(".down_alert").css("display")=="none"){
+					$(this).find(".down_alert").show();
+					$(this).siblings("li").find(".down_alert").hide();
+					//下拉箭头旋转
+					$(this).find("img").addClass("rotate_act");
+				}else{
+					$(this).find(".down_alert").hide();
+					$(this).find("img").removeClass("rotate_act");
+				}
+			});
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 		</script>
 	</body>
 
