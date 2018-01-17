@@ -72,6 +72,8 @@
 
 .shai_xuan{
 	width: 100%;
+	max-width: 750px;
+	margin: 0 auto;
 	height: 60px;
 	background-color: #f8f8f8;
 }
@@ -85,6 +87,13 @@
 	display: block;
 	font-size: 16px;
 }
+.shai_xuan ul li img{
+	width: 15px;
+	margin: 26px 0 0 5px;
+}
+.shai_xuan ul li span{
+	margin-top: 18px;
+}
 .shai_xuan ul li:first-child{
 	width: 40%;
 }
@@ -94,4 +103,13 @@
 }
 .shai_xuan ul li:first-child span{
 	margin: 18px 0 0 10px;
+}
+.down_alert{
+	background: url(../img/alert_bg.png) center no-repeat;
+}
+.down_alert p{
+	width: 100px;
+	text-align: center;
+	padding-top: 20px;
+	margin: 0;
 }
