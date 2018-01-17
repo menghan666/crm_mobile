@@ -28,16 +28,16 @@
 	color:#fff;
 	margin-top: 4px;
 }
-.muea_box{
-	position: absolute;
-	top:28px;
-	right:0;
-	z-index: 1000;
-	display: block;
-	width: 150px;
-	padding: 20px 10px;
-	background: url(../img/cai_dan.png) center no-repeat;
-	background-size:100% 100%;
+.muea_box {
+    position: absolute;
+    top: 28px;
+    right: 0;
+    z-index: 1000;
+    display: block;
+    width: 150px;
+    padding: 20px 22px;
+    background: url(../img/cai_dan.png) center no-repeat;
+    background-size: 106% 100%;
 }
 .muea_box li{
 	display: block;
@@ -55,7 +55,7 @@
 	display: block;
 	position: absolute;
 	top:12px;
-	right:21%;
+	right:10%;
 	width: 5px;
 	height: 5px;
 	border-radius: 50%;
