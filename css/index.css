@@ -561,15 +561,14 @@ ul.list-li li a{
 	padding:0 0 5px 0;
 }
 .ht-ul ul{
-	width: 94%;
+	width: 100%;
 	height: auto;
 	margin: 0 auto;
 }
 .ht-ul ul li{
 	width:33.3%;
-	text-align: left;
+	text-align: center;
 	float: left;
-	padding-left: 5%;
 }
 .ht-ul ul li p{
 	color: #333;
