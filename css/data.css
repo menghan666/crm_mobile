@@ -45,6 +45,8 @@
 	padding: 10px 0;
 	border-top: 1px solid #e5e5e5;
 	position: relative;
+	width: 90%;
+	margin: 0 auto;
 }
 .muea_box li:first-child{
 	border:none;
