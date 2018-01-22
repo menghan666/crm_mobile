@@ -37,9 +37,8 @@
 				<li><a href="#">站内消息 <span class="news_dian"></span></a></li>
 			</ul>
 		</div>
-		<div class="ysk-con">
+		<form action="" method="" class="ysk-con">
 			<div class="db-bt db-bta">主要信息</div>
-			<form>
 			<div class="ysk-list">
 				<p>应付款名</p>
 				<input type="text" name="" id="" value="" placeholder="请输入" />
@@ -79,14 +78,13 @@
 			<div class="tjy-btn">
 				<div class="tjy-btna">
 					<ul>
-						<li class="tj-li"><a href="#">保存</a></li>
-						<li class="tj-li"><a href="#">保存并新建</a></li>
+						<li class="tj-li"><button>保存</button></li>
+						<li class="tj-li"><button>保存并新建</button></li>
 						<li class="tj-lia"><a href="#">返回</a></li>
 					</ul>
 				</div>
 			</div>
-			</form>
-		</div>
+		</form>
 		<div id="kh-con" class="kh-con">
 			<div class="kh-cona">
 				<div class="kh-top">
@@ -354,22 +352,24 @@
 			var oImgb = document.getElementById('kh-imga');
 			var oDiv = document.getElementById('kh-con');
 			var oDiva = document.getElementById('kh-cona');
-			var oBtna = document.getElementById('btna');
-			var oBtnaa = document.getElementById('btnaa');
+			
 			
 			oImga.onclick = function(){
+				
+				$(".header_box").addClass("header_fixed");
 				oDiv.style.display = 'block';
-			}
-			oBtna.onclick = function(){
-				oDiv.style.display = 'none';
 			}
 			
 			oImgb.onclick = function(){
+				$(".header_box").addClass("header_fixed");
 				oDiva.style.display = 'block';
 			}
-			oBtnaa.onclick = function(){
-				oDiva.style.display = 'none';
-			}
+
+			//点击取消按钮隐藏弹框
+			$(".ta-btnl").on("click","a",function(){
+				$(".header_box").removeClass("header_fixed");
+				$(this).parents(".kh-con").hide();
+			})
 		</script>
 	</body>
 </html>
