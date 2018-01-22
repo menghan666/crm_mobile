@@ -6,6 +6,12 @@
 	background-color: #125da3;
 	position: relative;
 }
+.header_fixed{
+	position: fixed !important;
+	top:0;
+	left: 0;
+	z-index: 10000;
+}
 .header_box .nav_back{
 	height: 100%;
 }
