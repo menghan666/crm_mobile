@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>编辑客户</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/reset.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/data.css" />
+	</head>
+	<body>
+		<!--顶部-->
+		<div class="header_box mui-row">
+			<div class="nav_back mui-col-xs-3 mui-col-sm-2 clearfix">
+				<a href="#" class="clearfix">
+					<img class="float_lf" src="img/back.png" alt="" />
+					<span class="float_lf">返回</span>
+				</a>
+			</div>
+			<div class="nav_title mui-col-xs-6 mui-col-sm-8">编辑客户</div>
+			<div class="nav_list mui-col-xs-3 mui-col-sm-2 clearfix">
+				<a href="#" class="news_btn float_lf">
+					<span>10</span>
+					<img src="img/e-mail.png" alt="" />
+				</a>
+				<a href="#" class="meau_dian float_rt"><img src="img/dian.png"/></a>
+			</div>
+			<!--隐藏菜单-->
+			<ul class="muea_box" style="display: none;">
+				<li><a href="#">首页</a></li>
+				<li><a href="#">线索</a></li>
+				<li><a href="#">客户</a></li>
+				<li><a href="#">商机</a></li>
+				<li><a href="#">订单</a></li>
+				<li><a href="#">财务</a></li>
+				<li><a href="#">站内消息 <span class="news_dian"></span></a></li>
+			</ul>
+		</div>
+		<div class="edit_main">
+			<div class="edit_title">主要信息</div>
+			<form action="">
+				<ul>
+					<li class="clearfix">
+						<div class="list_left float_lf">
+							<p>负责人</p>
+							<input type="text" name="" id="" value="" placeholder="田宁"/>
+						</div>
+						<div class="list_right float_rt"><a href="#">放入客户池</a></div>
+					</li>
+					<li class="clearfix li_btn first_linkman">
+						<p>首要联系人</p>
+						<div class="clearfix">
+							<input class="float_lf" type="" name="" id="" value="" placeholder="鱼雷艇"/>
+							<img class="float_rt" src="img/right_jt.png"/>
+						</div>
+					</li>
+					<li class="clearfix kehu_name">
+						<p>客户名称<span>*</span></p>
+						<div class="">
+							<input class="" type="" name="" id="" value="" placeholder="鱼雷艇"/>
+						</div>
+					</li>
+					<li class="clearfix li_btn">
+						<p>客户行业</p>
+						<div class="clearfix">
+							<input class="float_lf" type="" name="" id="" value="" placeholder="请选择"/>
+							<img class="float_rt" src="img/right_jt.png"/>
+						</div>
+					</li>
+					<li class="clearfix kehu_name">
+						<p>客户信息来源<span>*</span></p>
+						<div class="">
+							<input class="" type="" name="" id="" value="" placeholder="独立开发"/>
+						</div>
+					</li>
+					<li class="clearfix li_btn">
+						<p>年营业额</p>
+						<div class="clearfix">
+							<input class="float_lf" type="" name="" id="" value="" placeholder="请选择"/>
+							<img class="float_rt" src="img/right_jt.png"/>
+						</div>
+					</li>
+					<li class="clearfix li_btn">
+						<p>客户联系地址</p>
+						<div class="clearfix">
+							<input class="float_lf" type="" name="" id="" value="" placeholder="请选择"/>
+							<img class="float_rt" src="img/right_jt.png"/>
+							<input type="text" name="" id="" value="街道信息" />
+						</div>
+					</li>
+					<div class="edit_title">附加信息</div>
+					<li class="clearfix li_btn">
+						<p>员工数</p>
+						<div class="clearfix">
+							<input class="float_lf" type="" name="" id="" value="" placeholder="请选择"/>
+							<img class="float_rt" src="img/right_jt.png"/>
+						</div>
+					</li>
+					<li class="clearfix kehu_name">
+						<p>备注</p>
+						<div class="">
+							<input class="" type="" name="" id="" value="" placeholder="鱼雷艇"/>
+						</div>
+					</li>
+				</ul>
+				<!--按钮-->
+				<div class="button_boxs">
+					<button>保存</button>
+					<a href="#">返回</a>
+				</div>
+				
+			</form>
+			
+			<!--首要联系人-->
+		</div>
+		
+		
+		<script src="js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			$(document).ready(function(){
+				var H = $(window).height();
+				$(".edit_main").css("min-height",(H-50));
+			});
+			$(".meau_dian").click(function(){
+				if($(".muea_box").css("display")=="none"){
+					$(".muea_box").show();
+				}else{
+					$(".muea_box").hide();
+				}
+			});
+		</script>
+	</body>
+
+</html>
