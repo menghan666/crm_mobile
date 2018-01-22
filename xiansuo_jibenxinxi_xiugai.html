@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>线索详情</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/mui.min.css" />
+		<link href="css/reset.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/new_file.css" />
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+	</head>
+	<body>
+		<div class="header_box mui-row">
+			<div class="nav_back mui-col-xs-3 mui-col-sm-3 clearfix">
+				<a href="#" class="clearfix">
+					<img class="float_lf" src="img/back.png" alt="" />
+					<span class="float_lf">返回</span>
+				</a>
+			</div>
+			<div class="nav_title mui-col-xs-6 mui-col-sm-6">线索详情</div>
+			<div class="nav_list mui-col-xs-3 mui-col-sm-3 clearfix">
+				<a href="#" class="news_btn float_lf">
+					<span>10</span>
+					<img src="img/e-mail.png" alt="" />
+				</a>
+				<a href="#" class="meau_dian float_rt"><img src="img/dian.png"/></a>
+			</div>
+			<!--隐藏菜单-->
+			<ul class="muea_box" style="display: none;">
+				<li><a href="#">首页</a></li>
+				<li><a href="#">线索</a></li>
+				<li><a href="#">客户</a></li>
+				<li><a href="#">商机</a></li>
+				<li><a href="#">订单</a></li>
+				<li><a href="#">财务</a></li>
+				<li><a href="#">站内消息 <span class="news_dian"></span></a></li>
+			</ul>
+		</div>
+		<div class="news-pact">
+			<div class="news-pact-tiele">主要信息</div>
+			<div class="news-pact-content">
+				<li style=" position: relative;">
+					<b>线索负责人</b>
+					<span>李浩天</span>
+					<a href="#" class="link">放入线索池</a>
+				</li>
+				<li>
+					<b>公司名称</b>
+					<p><input type="text" placeholder="请输入" class="inp"></p>
+				</li>
+				<li>
+					<b>来源<span>*</span></b>
+					<a href="#">请选择<img src="img/jiantou.png"></a>
+				</li>
+				<li>
+					<b>来源人</b>
+					<a href="#">请选择<img src="img/jiantou.png"></a>
+				</li>
+				<li>
+					<b>联系人姓名</b>
+					<p><input type="text" placeholder="请输入" class="inp"></p>
+				</li>
+				<li>
+					<b>职务</b>
+					<p><input type="text" placeholder="请输入" class="inp"></p>
+				</li>
+				<li>
+					<b>尊称</b>
+					<a href="#">请选择<img src="img/jiantou.png"></a>
+				</li>
+				<li>
+					<b>手机</b>
+					<p><input type="text" placeholder="请输入" class="inp"></p>
+				</li>
+				<li>
+					<b>邮箱</b>
+					<p><input type="text" placeholder="请输入" class="inp"></p>
+				</li>
+				<li>
+					<b>地址</b>
+					<a href="#">请选择<img src="img/jiantou.png"></a>
+					<p><input type="text" placeholder="请输入街道信息" class="inp"></p>
+				</li>
+				<li>
+					<b>执行周期</b>
+					<p><input type="text" placeholder="请输入" class="inp"></p>
+				</li>
+				<li>
+					<b>下次联系时间</b>
+					<p><input type="text" placeholder="请输入" class="inp"></p>
+				</li>
+				<li>
+					<b>下次联系内容</b>
+					<p><input type="text" placeholder="请输入" class="inp"></p>
+				</li>
+				<li style="background: #f8f8f8; padding: 15px 2.5%;font-size: 1.0rem;">
+					附加信息
+				</li>
+				<li>
+					<b>微信</b>
+					<p><input type="text" placeholder="请输入" class="inp"></p>
+				</li>
+				<li>
+					<b>QQ</b>
+					<p><input type="text" placeholder="请输入" class="inp"></p>
+				</li>
+				<li>
+					<b>备注</b>
+					<p><input type="text" placeholder="请输入" class="inp"></p>
+				</li>
+				<li>
+					<input type="button" value="保存" class="btn">
+					<input type="button" value="返回" class="btn" style="background: #f8f8f8; color: #333;">
+				</li>
+			</div>
+		</div>
+		<script>
+			$(".meau_dian").click(function(){
+				if($(".muea_box").css("display")=="none"){
+					$(".muea_box").show();
+				}else{
+					$(".muea_box").hide();
+				}
+			});
+		</script>
+	</body>
+</html>
