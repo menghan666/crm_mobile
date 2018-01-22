@@ -320,11 +320,18 @@ footer ul li a p{
 	width: 100%;
 	border-top: 1px solid #e5e5e5;
 }
+.tab_box .tab_items .info_list:after{
+	content:"";
+	display:block;
+	height:0;
+	clear:both;
+}
 .tab_box .tab_items .info_list:first-child{
 	border-top:0;
 }
 .tab_box .tab_items .info_list span{
-	display: inline-block;
+	display: block;
+	float: left;
 	color:#333;
 	box-sizing: border-box;
 	padding: 6px 0;
@@ -338,7 +345,7 @@ footer ul li a p{
 	width: 30%;
 }
 .tab_box .tab_items .info_list span+span{
-	width: 68%;
+	width: 70%;
 	padding-left: 10px;
 	vertical-align: bottom;
 }
@@ -549,6 +556,134 @@ footer ul li a p{
 	border-radius: 20px;
 	text-align: center;
 }
+.ming_pian {
+	background-color: #f0f0f0;
+}
+.ming_pian span{
+	display: block !important;
+	float: left; 
+}
+.ming_pian span{
+	height: 100%;
+}
+.ming_pian span:first-child+span{
+	width: 70% !important;	
+	box-sizing: border-box;
+	background-color: #fff;
+}
+.ysk_menu div{
+	width: 50%;
+	float: left;
+}
+.ysk_menu div a{
+	display: block;
+	text-align: center;
+	width: 80px;
+	margin: 0 auto !important;
+}
+.nothing_data{
+	margin: 20% 0 0 0;
+	text-align: center;
+}
+.nothing_data img{
+	width: 100px;
+	display: block;
+	margin: 30px auto;
+}
+/**********编辑客户**********/
+.edit_main{
+	width: 100%;
+	max-width: 750px;
+	margin: 0 auto;
+	background-color: #fff;
+}
+.edit_main .edit_title{
+	padding: 10px;
+	text-align: left;
+	font-size: 16px;
+	background-color: #f0f0f0;
+}
+.edit_main form{
+	/*padding:0 15px;*/
+}
+.edit_main ul li{
+	padding: 10px 10px 0 10px;
+	border-top: 1px solid #e5e5e5;
+}
+.edit_main ul li:first-child{
+	border:none;
+}
+.edit_main ul li .list_left{
+	width: 70%;
+}
+.edit_main ul li p{
+	color:#333;
+}
+.edit_main ul li input{
+	width: 100%;
+	padding: 10px 0;
+	border:none;
+	color:#999;
+	margin: 0;
+}
+.edit_main ul li .list_right{
+	width: 30%;
+	margin-top: 8px;
+}
+.edit_main ul li .list_right a{
+	display: block;
+	width: 100px;
+	text-align: center;
+	padding: 6px 0;
+	color:#125DA3;
+	float: right;
+	border:1px solid #125DA3;
+	border-radius: 20px;
+}
+.li_btn div input{
+	width: 80% !important;
+	padding: 10px 0;
+	border:none;
+	color:#999;
+	margin: 0;
+}
+.li_btn div img{
+	width: 8px;
+	margin-top:14px;
+}
+.kehu_name p span{
+	color:#FF0000;
+	font-size: 16px;
+	padding-left: 5px;
+}
+.button_boxs{
+	width: 100%;
+	text-align: center;
+	padding: 30px 0;
+}
+.button_boxs button,.button_boxs a{
+	display: inline-block;
+	width: 120px;
+	padding: 10px 0;
+	margin: 0 10px;
+	border-radius: 5px;
+}
+.button_boxs button{
+	color:#fff;
+	border:1px solid #125DA3;
+	background-color: #125DA3;
+}
+.button_boxs a{
+	color:#666;
+	border:1px solid #f0f0f0;
+	background-color: #f0f0f0;
+}
+
+
+
+
+
+
 @media only screen and (min-width: 750px){
 	.tab_menu a:first-child {
 	    margin-left: 11%;
@@ -560,7 +695,7 @@ footer ul li a p{
 		width: 20%;
 	}
 	.tab_box .tab_items .info_list span+span{
-		width: 78%;
+		width: 80% !important;
 	}
 	.share_box {
 	    width: 70%;
@@ -580,6 +715,17 @@ footer ul li a p{
 		padding:5px;
 		border-radius: 5px;
 	}
+	.ming_pian span:first-child{
+		padding: 3% 15px 0 0 !important;
+	}
+}
+@media only screen and (max-width: 740px){
+	.ming_pian{
+		height: 100px;
+	}
+	.ming_pian span:first-child{
+		padding: 3.5% 15px 0 0 !important;
+	}
 }
 @media only screen and (max-width: 414px) {
 	.tab_menu a {
@@ -588,6 +734,12 @@ footer ul li a p{
 	.share_box .bu_men li{
 		width: 23%;
 	}
+	.ming_pian{
+		height: 140px;
+	}
+	.ming_pian span:first-child{
+		padding: 11.5% 15px 0 0 !important;
+	}
 }
 @media only screen and (max-width: 375px) {
 	.tab_menu a {
@@ -595,6 +747,12 @@ footer ul li a p{
 	}
 	.share_box .teams li{
 		width: 100%;
+	}
+	.ming_pian{
+		height: 160px;
+	}
+	.ming_pian span:first-child{
+		padding: 17.5% 15px 0 0 !important;
 	}
 }
 @media only screen and (max-width: 360px) {
@@ -620,7 +778,7 @@ footer ul li a p{
 		width: 31%;
 	}
 	.tab_box .tab_items .info_list span+span{
-		width: 67%;
+		width: 69% !important;
 		padding-left: 5px;
 	}
 	.share_box {
