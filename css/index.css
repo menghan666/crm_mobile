@@ -774,6 +774,8 @@ table.tj-ta tr td{
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;	
+    -o-text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
 }
 table.tj-ta tr td input{
 	width: 20px;
@@ -841,7 +843,7 @@ table.tj-ta tr td p{
 	float: left;
 }
 @media only screen and (max-width: 320px) {
- .kh-con .kh-top .yh-sr p{
+  .kh-con .kh-top .yh-sr p{
 	width: 30%;
 	float: left;
 	font-size: 0.8rem;
@@ -889,4 +891,163 @@ table.tj-tab tr td p{
 	text-align: left;
 	float: left;
 	color: #333;
+}
+/*收款单详情页面样式*/
+.skd-con{
+	width:100%;
+	min-height: 100px;
+	height: auto;
+	overflow: hidden;
+	max-width: 750px;
+	margin: 0 auto;
+}
+.skd-con .skd-cona{
+	width:92%;
+	min-height: 100px;
+	height: auto;
+	overflow: hidden;
+	margin: 0px auto;
+}
+.skd-con .skd-conaa{
+	width:100%;
+	min-height: 100px;
+	height: auto;
+	overflow: hidden;
+	border: 1px solid #e5e5e5;
+	margin: 15px auto;
+}
+.skd-li{
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	border-bottom: 1px solid #e5e5e5;
+}
+.skd-li .skd-lileft{
+	width:25%;
+	float: left;
+	height: 39px;
+	text-align: right;
+	padding-right: 2%;
+	background: #f6f6f6;
+	color: #666666;
+}
+.skd-li .skd-liright{
+	width:73%;
+	float: left;
+	text-align: left;
+	padding-left: 2%;
+	color: #333;
+}
+.skd-li .skd-liright input{
+	width:100%;
+	background: none;
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+.sdl-btna{
+	clear: both;
+	width:63%;
+	line-height: 40px;
+	margin-left: 28%;
+}
+.sdl-btna a.del-xg{
+	padding: 5px 10px;
+	background: #125da3;
+	margin-right: 10px;
+	border-radius: 5px;
+	color: #fff;
+}
+.sdl-btna a.del-c{
+	border: 1px solid #125da3;
+	color: #125da3;
+	padding: 5px 10px;
+	border-radius: 5px;
+}
+.sk-zt{
+	width:100%;
+	height: 60px;
+	line-height: 60px;
+	background: #f8f8f8;
+	border-bottom: 1px solid #e5e5e5;
+	padding: 0 3%;
+	color: #333;
+}
+.sk-zt p{
+	float: left;
+	color: #333;
+	margin-right: 4%;
+}
+.sk-zt .sk-zta{
+	width:70%;
+	float: left;
+}
+.sk-aa{
+	width:100%;
+	min-height: 100px;
+	height: auto;
+	overflow: hidden;
+}
+.sk-aat{
+	width:100%;
+	height: 50px;
+	line-height: 50px;
+	border-bottom: 1px solid #e5e5e5;
+	font-weight: bold;
+	text-align: center;
+}
+.sk-aat .sk-aatl{
+	width: 25%;
+	float: left;
+}
+.sk-aat .sk-aatm{
+	width: 50%;
+	float: left;
+}
+.sk-aat .sk-aatr{
+	width: 25%;
+	float: left;
+}
+.sk-ab{
+	width:100%;
+	height: 50px;
+	line-height: 50px;
+	border-bottom: 1px solid #e5e5e5;
+	text-align: center;
+}
+.sk-ab .sk-abl{
+	width:25%;
+	float: left;
+	white-space: nowrap;
+	overflow: hidden;
+　　text-overflow: ellipsis;
+}
+.sk-ab .sk-abl input{
+	float: left;
+	margin-left: 8%;
+	margin-top: 20px;
+}
+.sk-ab .sk-abl p{
+	width:75%;
+	float: left;
+	color: #333;
+}
+.sk-ab .sk-abm{
+	width:50%;
+	float: left;
+	text-align: left;
+	padding: 0 2%;
+}
+.sk-ab .sk-abr{
+	width:25%;
+	float: left;
+}
+input.ts-ce{
+	width: 15px;
+	height: 15px;
+	margin-top: 24px;
+	float: left;
+}
+.ts-cea{
+	color: #125da3;
 }
