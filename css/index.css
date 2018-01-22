@@ -784,14 +784,13 @@ table.tj-ta tr td input{
 	margin-top: 5px;
 }
 table.tj-ta tr td p{
-	white-space: nowrap;
-	overflow: hidden;
-　　text-overflow: ellipsis;
 	color: #333;
 	text-align: left;
-	 -o-text-overflow:ellipsis;
-    -moz-text-overflow: ellipsis;
-    -webkit-text-overflow: ellipsis;
+	overflow: hidden;
+	-o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+    -webkit-box-orient: vertical;
 	 
 }
 .ta-btn{
