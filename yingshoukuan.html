@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>应收款</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link href="css/reset.css" rel="stylesheet" />
+		<link href="css/data.css" rel="stylesheet" />
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+	</head>
+	<body>
+		<!--顶部-->
+		<div class="header_box mui-row">
+			<div class="nav_back mui-col-xs-3 mui-col-sm-2 clearfix">
+				<a href="#" class="clearfix">
+					<img class="float_lf" src="img/back.png" alt="" />
+					<span class="float_lf">返回</span>
+				</a>
+			</div>
+			<div class="nav_title mui-col-xs-6 mui-col-sm-8">应收款</div>
+			<div class="nav_list mui-col-xs-3 mui-col-sm-2 clearfix">
+				<a href="#" class="news_btn float_lf">
+					<span>10</span>
+					<img src="img/e-mail.png" alt="" />
+				</a>
+				<a href="#" class="meau_dian float_rt"><img src="img/dian.png"/></a>
+			</div>
+			<!--隐藏菜单-->
+			<ul class="muea_box" style="display: none;">
+				<li><a href="#">首页</a></li>
+				<li><a href="#">线索</a></li>
+				<li><a href="#">客户</a></li>
+				<li><a href="#">商机</a></li>
+				<li><a href="#">订单</a></li>
+				<li><a href="#">财务</a></li>
+				<li><a href="#">站内消息 <span class="news_dian"></span></a></li>
+			</ul>
+		</div>
+		<!--tab切换菜单-->
+		<div class="tab_menu ysk_menu clearfix">
+			<div><a class="tab_act" href="javascript:;">应收款详情</a></div>
+			<div><a class="" href="javascript:;">收款记录</a></div>
+		</div>
+		<div class="tab_box">
+			<!--应收款详情-->
+			<div class="tab_items" style="display: block;">
+				<div class="tab_boxs2">
+					<div class="info_list">
+						<span>应收款名</span>
+						<span class="txt-num1">上海迅耳网络科技有限公司</span>
+					</div>
+					<div class="info_list">
+						<span>客户</span>
+						<span class="txt-num1">高山</span>
+					</div>
+					<div class="info_list">
+						<span>合同编号</span>
+						<span class="txt-num1">ZX201801124012</span>
+					</div>
+					<div class="info_list">
+						<span>收款时间</span>
+						<span class="txt-num1">2018-01-20</span>
+					</div>
+					<div class="info_list">
+						<span>收款金额</span>
+						<span class="txt-num1">2800.00</span>
+					</div>
+					<div class="info_list">
+						<span>负责人</span>
+						<span class="txt-num1">翟旗</span>
+					</div>
+					<div class="info_list">
+						<span>创建人</span>
+						<span class="txt-num1">翟旗</span>
+					</div>
+					<div class="info_list">
+						<span>创建时间 </span>
+						<span class="txt-num1">2018-01-12</span>
+					</div>
+					<div class="info_list">
+						<span>描述</span>
+						<span class="txt-num1">2018-01-12</span>
+					</div>
+					<div class="info_list btns_box">
+						<a href="#" class="">修改</a>
+						<a href="javascript:;" class="del_list">删除</a>
+					</div>
+				</div>
+			</div>
+			<!--收款记录-->
+			<div class="tab_items" style="display: none;">
+				<div class="">
+					<p>共计<span>0</span>条记录，共计已收款<span>0</span>元，剩余<span>2800</span>元未收款。</p>
+				</div>
+				<div class="nothing_data">
+					<p>暂无数据~</p>
+					<img src="img/nothing_img.png"/>
+				</div>
+				<!--添加按钮-->
+				<div class="add_box"><a href="javascript:;">添加</a></div>
+			</div>
+		</div>
+		
+		
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			$(document).ready(function(){
+				var H = $(window).height();
+				$(".tab_box").css("min-height",(H-94));
+			});
+			
+			$(".meau_dian").click(function(){
+				if($(".muea_box").css("display")=="none"){
+					$(".muea_box").show();
+				}else{
+					$(".muea_box").hide();
+				}
+			});
+			
+			//tab切换
+			$(".ysk_menu div").on("click","a",function(){
+				var index = $(this).parent().index();
+				$(this).addClass("tab_act").parent().siblings("div").find("a").removeClass("tab_act");
+				$(".tab_box>div:eq("+index+")").show().siblings(".tab_items").hide();
+			});
+			
+			//点击按钮切换样式
+			$(".btns_box").on("click","a",function(){
+				$(this).addClass("btn_act").siblings().removeClass("btn_act");
+			})
+			
+			//删除按钮
+			$(".del_list").click(function(){
+				$(".tab_boxs2").remove();
+				$(".nothing_box").show().parent().css("border","none");
+			});
+			
+		</script>
+	</body>
+
+</html>
