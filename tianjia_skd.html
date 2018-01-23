@@ -37,9 +37,9 @@
 				<li><a href="#">站内消息 <span class="news_dian"></span></a></li>
 			</ul>
 		</div>
-		<div class="ysk-con">
+		<form action="" method="" class="ysk-con">
 			<div class="db-bt db-bta">主要信息</div>
-			<form>
+			
 			<div class="ysk-list">
 				<p>收款单号</p>
 				<input type="text" name="" id="" value="" placeholder="自动生成" />
@@ -81,14 +81,13 @@
 			<div class="tjy-btn">
 				<div class="tjy-btna">
 					<ul>
-						<li class="tj-li"><a href="#">保存</a></li>
-						<li class="tj-li"><a href="#">保存并新建</a></li>
+						<li class="tj-li"><button>保存</button></li>
+						<li class="tj-li"><button>保存并新建</button></li>
 						<li class="tj-lia"><a href="#">返回</a></li>
 					</ul>
 				</div>
 			</div>
-			</form>
-		</div>
+		</form>
 		<div id="kh-con" class="kh-con">
 			<div class="kh-cona">
 				<div class="kh-top">
@@ -114,7 +113,7 @@
 					</div>
 					<div class="sk-ab">
 						<div class="sk-abl">
-							<input type="checkbox" name="" id="" value="" />
+							<input type="radio" name="radio" id="" value="" />
 							<p class="txt-num1">优化相关搜索优化相关搜索...</p>
 						</div>
 						<div class="sk-abm txt-num1">
@@ -124,7 +123,7 @@
 					</div>
 					<div class="sk-ab">
 						<div class="sk-abl">
-							<input type="checkbox" name="" id="" value="" />
+							<input type="radio" name="" id="radio" value="" />
 							<p class="txt-num1">优化相关搜索优化相关搜索...</p>
 						</div>
 						<div class="sk-abm txt-num1">
@@ -134,7 +133,7 @@
 					</div>
 					<div class="sk-ab">
 						<div class="sk-abl">
-							<input type="checkbox" name="" id="" value="" />
+							<input type="radio" name="radio" id="" value="" />
 							<p class="txt-num1">优化相关搜索优化相关搜索...</p>
 						</div>
 						<div class="sk-abm txt-num1">
@@ -144,7 +143,7 @@
 					</div>
 					<div class="sk-ab">
 						<div class="sk-abl">
-							<input type="checkbox" name="" id="" value="" />
+							<input type="radio" name="radio" id="" value="" />
 							<p class="txt-num1">优化相关搜索优化相关搜索...</p>
 						</div>
 						<div class="sk-abm txt-num1">
@@ -154,7 +153,7 @@
 					</div>
 					<div class="sk-ab">
 						<div class="sk-abl">
-							<input type="checkbox" name="" id="" value="" />
+							<input type="radio" name="radio" id="" value="" />
 							<p class="txt-num1">优化相关搜索优化相关搜索...</p>
 						</div>
 						<div class="sk-abm txt-num1">
@@ -197,7 +196,7 @@
 					</tr>
 					<tr>
 						<td>
-							<input type="checkbox" name="" id="" value="" />
+							<input type="radio" name="radio1" id="" value="" />
 							<p>meijiexiaG</p>
 						</td>
 						<td>管理</td>
@@ -205,7 +204,7 @@
 					</tr>
 					<tr>
 						<td>
-							<input type="checkbox" name="" id="" value="" />
+							<input type="radio" name="radio1" id="" value="" />
 							<p>meijiexiaG</p>
 						</td>
 						<td>管理</td>
@@ -213,7 +212,7 @@
 					</tr>
 					<tr>
 						<td>
-							<input type="checkbox" name="" id="" value="" />
+							<input type="radio" name="radio1" id="" value="" />
 							<p>meijiexiaG</p>
 						</td>
 						<td>管理</td>
@@ -221,7 +220,7 @@
 					</tr>
 					<tr>
 						<td>
-							<input type="checkbox" name="" id="" value="" />
+							<input type="radio" name="radio1" id="" value="" />
 							<p>meijiexiaG</p>
 						</td>
 						<td>管理</td>
@@ -229,7 +228,7 @@
 					</tr>
 					<tr>
 						<td>
-							<input type="checkbox" name="" id="" value="" />
+							<input type="radio" name="radio1" id="" value="" />
 							<p>meijiexiaG</p>
 						</td>
 						<td>管理</td>
@@ -237,7 +236,7 @@
 					</tr>
 					<tr>
 						<td>
-							<input type="checkbox" name="" id="" value="" />
+							<input type="radio" name="radio1" id="" value="" />
 							<p>meijiexiaG</p>
 						</td>
 						<td>管理</td>
@@ -245,7 +244,7 @@
 					</tr>
 					<tr>
 						<td>
-							<input type="checkbox" name="" id="" value="" />
+							<input type="radio" name="radio1" id="" value="" />
 							<p>meijiexiaG</p>
 						</td>
 						<td>管理</td>
@@ -274,22 +273,24 @@
 			var oImgb = document.getElementById('kh-imga');
 			var oDiv = document.getElementById('kh-con');
 			var oDiva = document.getElementById('kh-cona');
-			var oBtna = document.getElementById('btna');
-			var oBtnaa = document.getElementById('btnaa');
+			
 			
 			oImga.onclick = function(){
+				
+				$(".header_box").addClass("header_fixed");
 				oDiv.style.display = 'block';
-			}
-			oBtna.onclick = function(){
-				oDiv.style.display = 'none';
 			}
 			
 			oImgb.onclick = function(){
+				$(".header_box").addClass("header_fixed");
 				oDiva.style.display = 'block';
 			}
-			oBtnaa.onclick = function(){
-				oDiva.style.display = 'none';
-			}
+
+			//点击取消按钮隐藏弹框
+			$(".ta-btnl").on("click","a",function(){
+				$(".header_box").removeClass("header_fixed");
+				$(this).parents(".kh-con").hide();
+			})
 		</script>
 	</body>
 </html>

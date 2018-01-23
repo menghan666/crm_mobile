@@ -657,13 +657,13 @@ ul.list-li li a{
 }
 .tjy-btn .tjy-btna ul li.tj-li{
 	color: #FFF;
-	background: #125da3;
 }
 .tjy-btn .tjy-btna ul li.tj-li button{
 	display: block;
 	color: #fff;
 	width: 100%;
 	height: 100%;
+	border-radius: 5px;
 	border:1px solid #125DA3;
 	background-color: #125DA3;
 }
