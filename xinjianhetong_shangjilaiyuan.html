@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>新建合同</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="css/mui.min.css" />
+		<link href="css/reset.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/new_file.css" />
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+	</head>
+	<body>
+		<div class="header_box mui-row">
+			<div class="nav_back mui-col-xs-3 mui-col-sm-3 clearfix">
+				<a href="#" class="clearfix">
+					<img class="float_lf" src="img/back.png" alt="" />
+					<span class="float_lf">返回</span>
+				</a>
+			</div>
+			<div class="nav_title mui-col-xs-6 mui-col-sm-6">新建合同</div>
+			<div class="nav_list mui-col-xs-3 mui-col-sm-3 clearfix">
+				<a href="#" class="news_btn float_lf">
+					<span>10</span>
+					<img src="img/e-mail.png" alt="" />
+				</a>
+				<a href="#" class="meau_dian float_rt"><img src="img/dian.png"/></a>
+			</div>
+			<!--隐藏菜单-->
+			<ul class="muea_box" style="display: none;">
+				<li><a href="#">首页</a></li>
+				<li><a href="#">线索</a></li>
+				<li><a href="#">客户</a></li>
+				<li><a href="#">商机</a></li>
+				<li><a href="#">订单</a></li>
+				<li><a href="#">财务</a></li>
+				<li><a href="#">站内消息 <span class="news_dian"></span></a></li>
+			</ul>
+		</div>
+		<div class="news-pact">
+			<div class="source-seek">
+				<p>
+					<select name="" class="set">
+						<option>筛选条件</option>
+						<option>2</option>
+					</select>
+				</p>
+				<p>
+					<select name="" class="set">
+						<option>开始字符</option>
+						<option>2</option>
+					</select>
+				</p>
+				<p>
+					<input type="text" class="seek">
+					<input type="button" value="搜索" class="btn2">
+				</p>
+				<a href="#">新建</a>
+			</div>
+			<div class="source-meter">
+				<li style="background: #f8f8f8;"><b>商机</b><b>联系人</b><b>金额</b><b>阶段</b></li>
+				<li><p><input type="checkbox" class="cbox">中座华文百科建设</p><p>高路名</p><p>¥19998</p><p>意向客户</p></li>
+				<li><p><input type="checkbox" class="cbox">中座华文百科建设</p><p>高路名</p><p>¥19998</p><p>意向客户</p></li>
+				<li><p><input type="checkbox" class="cbox">中座华文百科建设</p><p>高路名</p><p>¥19998</p><p>意向客户</p></li>
+				<li><p><input type="checkbox" class="cbox">中座华文百科建设</p><p>高路名</p><p>¥19998</p><p>意向客户</p></li>
+				<li><p><input type="checkbox" class="cbox">中座华文百科建设</p><p>高路名</p><p>¥19998</p><p>意向客户</p></li>
+				<li><p><input type="checkbox" class="cbox">中座华文百科建设</p><p>高路名</p><p>¥19998</p><p>意向客户</p></li>
+				<li>
+					<input type="button" value="确定" class="btn">
+					<input type="button" value="取消" class="btn" style="background: #f8f8f8; color: #333;">
+				</li>
+			</div>
+		</div>
+		<script>
+			$(".meau_dian").click(function(){
+				if($(".muea_box").css("display")=="none"){
+					$(".muea_box").show();
+				}else{
+					$(".muea_box").hide();
+				}
+			});
+		</script>
+	</body>
+</html>
