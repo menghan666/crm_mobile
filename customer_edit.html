@@ -7,7 +7,10 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="css/mui.min.css" rel="stylesheet" />
 		<link href="css/reset.css" rel="stylesheet" />
-		<link rel="stylesheet" href="css/data.css" />
+		<link href="css/data.css" rel="stylesheet" />
+		<!--选择地址三级联动插件-->
+		<link href="css/layout.min.css" rel="stylesheet" />
+    	<link href="css/scs.min.css" rel="stylesheet" />
 	</head>
 	<body>
 		<!--顶部-->
@@ -39,7 +42,7 @@
 		</div>
 		<div class="edit_main">
 			<div class="edit_title">主要信息</div>
-			<form action="">
+			<form id="form_box" action="" onsubmit="return ti_jiao();">
 				<ul>
 					<li class="clearfix">
 						<div class="list_left float_lf">
@@ -52,41 +55,50 @@
 						<p>首要联系人</p>
 						<div class="clearfix">
 							<input class="float_lf" type="" name="" id="" value="" placeholder="鱼雷艇"/>
-							<img class="float_rt" src="img/right_jt.png"/>
+							<a id="choose_btn1" href="javascript:;" class="float_rt">
+								<img class="" src="img/right_jt.png"/>
+							</a>
 						</div>
 					</li>
 					<li class="clearfix kehu_name">
 						<p>客户名称<span>*</span></p>
 						<div class="">
-							<input class="" type="" name="" id="" value="" placeholder="鱼雷艇"/>
+							<input id="kehu_names" type="text" name="" id="" value="" placeholder="鱼雷艇"/>
 						</div>
 					</li>
 					<li class="clearfix li_btn">
 						<p>客户行业</p>
 						<div class="clearfix">
 							<input class="float_lf" type="" name="" id="" value="" placeholder="请选择"/>
-							<img class="float_rt" src="img/right_jt.png"/>
+							<a id="choose_btn2" href="javascript:;" class="float_rt">
+								<img class="" src="img/right_jt.png"/>
+							</a>
 						</div>
 					</li>
 					<li class="clearfix kehu_name">
 						<p>客户信息来源<span>*</span></p>
 						<div class="">
-							<input class="" type="" name="" id="" value="" placeholder="独立开发"/>
+							<input id="kehu_info" type="" name="" id="" value="" placeholder="独立开发"/>
 						</div>
 					</li>
 					<li class="clearfix li_btn">
 						<p>年营业额</p>
 						<div class="clearfix">
 							<input class="float_lf" type="" name="" id="" value="" placeholder="请选择"/>
-							<img class="float_rt" src="img/right_jt.png"/>
+							<a id="choose_btn3" href="javascript:;" class="float_rt">
+								<img class="" src="img/right_jt.png"/>
+							</a>
 						</div>
 					</li>
 					<li class="clearfix li_btn">
 						<p>客户联系地址</p>
 						<div class="clearfix">
-							<input class="float_lf" type="" name="" id="" value="" placeholder="请选择"/>
-							<img class="float_rt" src="img/right_jt.png"/>
-							<input type="text" name="" id="" value="街道信息" />
+							<!--选择地址-->
+							<div class="choose_ads">
+						        <input type="text" readonly placeholder="请选择" id="myAddrs" name="addr" data-key="4-84-1298" value="" />
+						    	<img class="" src="img/right_jt.png"/>
+							</div>
+							<input type="text" name="" id="" value="" placeholder="街道信息"/>
 						</div>
 					</li>
 					<div class="edit_title">附加信息</div>
@@ -94,7 +106,9 @@
 						<p>员工数</p>
 						<div class="clearfix">
 							<input class="float_lf" type="" name="" id="" value="" placeholder="请选择"/>
-							<img class="float_rt" src="img/right_jt.png"/>
+							<a id="choose_btn5" href="javascript:;" class="float_rt">
+								<img class="" src="img/right_jt.png"/>
+							</a>
 						</div>
 					</li>
 					<li class="clearfix kehu_name">
@@ -112,18 +126,181 @@
 				
 			</form>
 			
-			<!--首要联系人-->
+			<form class="hide_box" style="display: none;">
+				<!--首要联系人-->
+				<div class="hide_list list1" style="display: none;">
+					<div class="shai_xuans clearfix">
+						<select name="" class="set_name float_lf">
+							<option value="">姓名</option>
+							<option value="">哈哈</option>
+							<option value="">你好</option>
+						</select>
+						<select name="" class="set_start float_lf">
+							<option value="">开始字符</option>
+							<option value="">哈喽</option>
+							<option value="">姓名</option>
+						</select>
+						<div class="search_box float_lf clearfix">
+							<input class="float_lf" type="text" name="" id="" value="" />
+							<button class="float_lf"><img src="img/ss_a.png"/></button>
+						</div>
+						<div class="new_bul float_rt"><a href="#">新建</a></div>
+					</div>
+					
+					<!--联系人表格-->
+					<table border="0" cellspacing="" cellpadding="">
+						<theader>
+							<tr>
+								<th></th>
+								<th>姓名</th>
+								<th>电话</th>
+								<th>邮件</th>
+								<th>职位</th>
+							</tr>	
+						</theader>
+						<tbody>
+							<tr class="list_content">
+								<td><input type="radio" name="radio" id="" value="" /></td>
+								<td>王卓</td>
+								<td>13345678901</td>
+								<td class="txt-num1" style="max-width: 80px;">39867908@qq.com</td>
+								<td>董事长</td>
+							</tr>
+							<tr class="list_content">
+								<td><input type="radio" name="radio" id="" value="" /></td>
+								<td>王卓</td>
+								<td>13345678901</td>
+								<td class="txt-num1" style="max-width: 80px;">39867908@qq.com</td>
+								<td>董事长</td>
+							</tr>
+							<tr class="list_content">
+								<td><input type="radio" name="radio" id="" value="" /></td>
+								<td>王卓</td>
+								<td>13345678901</td>
+								<td class="txt-num1" style="max-width: 80px;">39867908@qq.com</td>
+								<td>董事长</td>
+							</tr>
+							<tr class="list_content">
+								<td><input type="radio" name="radio" id="" value="" /></td>
+								<td>王卓</td>
+								<td>13345678901</td>
+								<td class="txt-num1" style="max-width: 80px;">39867908@qq.com</td>
+								<td>董事长</td>
+							</tr>
+							<tr class="list_content">
+								<td><input type="radio" name="radio" id="" value="" /></td>
+								<td>王卓</td>
+								<td>13345678901</td>
+								<td class="txt-num1" style="max-width: 80px;">39867908@qq.com</td>
+								<td>董事长</td>
+							</tr>
+							<tr class="list_content">
+								<td><input type="radio" name="radio" id="" value="" /></td>
+								<td>王卓</td>
+								<td>13345678901</td>
+								<td class="txt-num1" style="max-width: 80px;">39867908@qq.com</td>
+								<td>董事长</td>
+							</tr>
+							<tr class="list_content">
+								<td><input type="radio" name="radio" id="" value="" /></td>
+								<td>王卓</td>
+								<td>13345678901</td>
+								<td class="txt-num1" style="max-width: 80px;">39867908@qq.com</td>
+								<td>董事长</td>
+							</tr>
+						</tbody>
+					</table>
+					
+					<!--按钮-->
+					<div class="hide_inbtn">
+						<button type="button" class="qu_xiao">取消</button>
+						<button class="sure_but">确定</button>
+					</div>
+				</div>
+				<!--客户行业-->
+				<div class="hide_list list2" style="display: none;">
+					<ul class="hangye_ul">
+						<li class="clearfix">
+							<input class="float_lf" type="radio" name="hangye" id="hy1" value="" />
+							<label for="#hy1" class="float_lf">教育/培训</label>
+						</li>
+						<li class="clearfix">
+							<input class="float_lf" type="radio" name="hangye" id="hy2" value="" />
+							<label for="#hy2" class="float_lf">电子商务</label>
+						</li>
+						<li class="clearfix">
+							<input class="float_lf" type="radio" name="hangye" id="hy3" value="" />
+							<label for="#hy3" class="float_lf">对外贸易</label>
+						</li>
+					</ul>
+					<!--按钮-->
+					<div class="hide_inbtn">
+						<button type="button" class="qu_xiao">取消</button>
+						<button class="sure_but">确定</button>
+					</div>
+				</div>
+				<!--年营业额-->
+				<div class="hide_list list3" style="display: none;">
+					<ul class="hangye_ul">
+						<li class="clearfix">
+							<input class="float_lf" type="radio" name="money" id="yye1" value="" />
+							<label for="#yye1" class="float_lf">1-10万</label>
+						</li>
+						<li class="clearfix">
+							<input class="float_lf" type="radio" name="money" id="yye2" value="" />
+							<label for="#yye2" class="float_lf">10-20万</label>
+						</li>
+						<li class="clearfix">
+							<input class="float_lf" type="radio" name="money" id="yye3" value="" />
+							<label for="#yye3" class="float_lf">20-50万</label>
+						</li>
+					</ul>
+					<!--按钮-->
+					<div class="hide_inbtn">
+						<button type="button" class="qu_xiao">取消</button>
+						<button class="sure_but">确定</button>
+					</div>
+				</div>
+				<!--员工人数-->
+				<div class="hide_list list5" style="display: none;">
+					<ul class="hangye_ul">
+						<li class="clearfix">
+							<input class="float_lf" type="radio" name="per_num" id="rs1" value="" />
+							<label for="#rs1" class="float_lf">1-20人</label>
+						</li>
+						<li class="clearfix">
+							<input class="float_lf" type="radio" name="per_num" id="rs2" value="" />
+							<label for="#rs2" class="float_lf">20-50人</label>
+						</li>
+						<li class="clearfix">
+							<input class="float_lf" type="radio" name="per_num" id="rs3" value="" />
+							<label for="#rs3" class="float_lf">50人以上</label>
+						</li>
+					</ul>
+					<!--按钮-->
+					<div class="hide_inbtn">
+						<button type="button" class="qu_xiao">取消</button>
+						<button class="sure_but">确定</button>
+					</div>
+				</div>
+			</form>
+			
 		</div>
 		
 		
 		<script src="js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/mui.min.js"></script>
+		<!--选择地址三级联动插件-->
+		<script src="js/jquery.scs.min.js"></script>
+    	<script src="js/CNAddrArr.min.js"></script>
 		<script type="text/javascript">
 			mui.init()
 			$(document).ready(function(){
 				var H = $(window).height();
 				$(".edit_main").css("min-height",(H-50));
+				$(".hide_box").css("min-height",(H-50));
 			});
+			//顶部菜单显示/隐藏
 			$(".meau_dian").click(function(){
 				if($(".muea_box").css("display")=="none"){
 					$(".muea_box").show();
@@ -131,6 +308,156 @@
 					$(".muea_box").hide();
 				}
 			});
+			//显示隐藏内容
+			$("#form_box ul").on("click","li a",function(){
+				$(".header_box").addClass("header_fixed");
+				//获取被点击按钮id里的数字
+				var IDs = $(this).attr("id").replace(/[^0-9]/ig,"");
+				$(".hide_box").show().children(".list"+IDs+"").show();
+			});
+			
+			//点击取消按钮
+			$(".hide_inbtn").on("click",".qu_xiao",function(){
+				$(".header_box").removeClass("header_fixed");
+				$(this).parents(".hide_list").hide();
+				$(this).parents(".hide_box").hide();
+			});
+			
+			//提交
+			function ti_jiao(){
+				if($("#kehu_names").val()==""){
+					$("#kehu_names").focus();
+					mui.toast("客户名称不能为空！");
+					return false;
+				}else if($("#kehu_info").val()==""){
+					$("#kehu_info").focus();
+					mui.toast("客户信息来源不能为空！");
+					return false;
+				}
+			}
+			
+		</script>
+		
+		<script>
+		    $(function() {
+		        /**
+		         * 通过数组id获取地址列表数组
+		         *
+		         * @param {Number} id
+		         * @return {Array} 
+		         */ 
+		        function getAddrsArrayById(id) {
+		            var results = [];
+		            if (addr_arr[id] != undefined)
+		                addr_arr[id].forEach(function(subArr) {
+		                    results.push({
+		                        key: subArr[0],
+		                        val: subArr[1]
+		                    });
+		                });
+		            else {
+		                return;
+		            }
+		            return results;
+		        }
+		        /**
+		         * 通过开始的key获取开始时应该选中开始数组中哪个元素
+		         *
+		         * @param {Array} StartArr
+		         * @param {Number|String} key
+		         * @return {Number} 
+		         */         
+		        function getStartIndexByKeyFromStartArr(startArr, key) {
+		            var result = 0;
+		            if (startArr != undefined)
+		                startArr.forEach(function(obj, index) {
+		                    if (obj.key == key) {
+		                        result = index;
+		                        return false;
+		                    }
+		                });
+		            return result;
+		        }
+		
+		        //bind the click event for 'input' element
+		        $("#myAddrs").click(function() {
+		            var PROVINCES = [],
+		                startCities = [],
+		                startDists = [];
+		            //Province data，shall never change.
+		            addr_arr[0].forEach(function(prov) {
+		                PROVINCES.push({
+		                    key: prov[0],
+		                    val: prov[1]
+		                });
+		            });
+		            //init other data.
+		            var $input = $(this),
+		                dataKey = $input.attr("data-key"),
+		                provKey = 1, //default province 北京
+		                cityKey = 36, //default city 北京
+		                distKey = 37, //default district 北京东城区
+		                distStartIndex = 0, //default 0
+		                cityStartIndex = 0, //default 0
+		                provStartIndex = 0; //default 0
+		
+		            if (dataKey != "" && dataKey != undefined) {
+		                var sArr = dataKey.split("-");
+		                if (sArr.length == 3) {
+		                    provKey = sArr[0];
+		                    cityKey = sArr[1];
+		                    distKey = sArr[2];
+		
+		                } else if (sArr.length == 2) { //such as 台湾，香港 and the like.
+		                    provKey = sArr[0];
+		                    cityKey = sArr[1];
+		                }
+		                startCities = getAddrsArrayById(provKey);
+		                startDists = getAddrsArrayById(cityKey);
+		                provStartIndex = getStartIndexByKeyFromStartArr(PROVINCES, provKey);
+		                cityStartIndex = getStartIndexByKeyFromStartArr(startCities, cityKey);
+		                distStartIndex = getStartIndexByKeyFromStartArr(startDists, distKey);
+		            }
+		            var navArr = [{//3 scrollers, and the title and id will be as follows:
+		                title: "省",
+		                id: "scs_items_prov"
+		            }, {
+		                title: "市",
+		                id: "scs_items_city"
+		            }, {
+		                title: "区",
+		                id: "scs_items_dist"
+		            }];
+		            SCS.init({
+		                navArr: navArr,
+		                onOk: function(selectedKey, selectedValue) {
+		                    $input.val(selectedValue).attr("data-key", selectedKey);
+		                }
+		            });
+		            var distScroller = new SCS.scrollCascadeSelect({
+		                el: "#" + navArr[2].id,
+		                dataArr: startDists,
+		                startIndex: distStartIndex
+		            });
+		            var cityScroller = new SCS.scrollCascadeSelect({
+		                el: "#" + navArr[1].id,
+		                dataArr: startCities,
+		                startIndex: cityStartIndex,
+		                onChange: function(selectedItem, selectedIndex) {
+		                    distScroller.render(getAddrsArrayById(selectedItem.key), 0); //re-render distScroller when cityScroller change
+		                }
+		            });
+		            var provScroller = new SCS.scrollCascadeSelect({
+		                el: "#" + navArr[0].id,
+		                dataArr: PROVINCES,
+		                startIndex: provStartIndex,
+		                onChange: function(selectedItem, selectedIndex) { //re-render both cityScroller and distScroller when provScroller change
+		                    cityScroller.render(getAddrsArrayById(selectedItem.key), 0);
+		                    distScroller.render(getAddrsArrayById(cityScroller.getSelectedItem().key), 0);
+		                }
+		            });
+		        });
+		    });
 		</script>
 	</body>
 
