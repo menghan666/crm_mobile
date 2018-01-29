@@ -158,25 +158,30 @@
 	margin: 14px 0 0 10px;
 }
 .down_alert{
+	width: 100px;
 	display: none;
 	position: absolute;
 	top: 35px;
-    left: -32px;
+    left: -13px;
 	z-index: 100;
 	padding: 20px 10px;
 	background: url(../img/alert_bg.png) center no-repeat;
 	background-size: 100% 100%;
 }
-.down_alert a{
+.down_alert input{
 	display: block;
-	width: 100px;
+	width: 20px;
 	text-align: center;
 	padding-top: 10px;
-	margin: 0;
+	margin: 6px 5px 0 5px;
 	color:#333;
+	float: left;
 	font-size: 14px;
 }
-
+.down_alert p{
+	line-height: 25px;
+	color: #333;
+}
 .rotate_act{
 	transform:rotate(180deg);
 	-ms-transform:rotate(180deg); 	/* IE 9 */
