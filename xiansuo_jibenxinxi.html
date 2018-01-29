@@ -20,7 +20,7 @@
 					<span class="float_lf">返回</span>
 				</a>
 			</div>
-			<div class="nav_title mui-col-xs-6 mui-col-sm-6">数据</div>
+			<div class="nav_title mui-col-xs-6 mui-col-sm-6">线索详情</div>
 			<div class="nav_list mui-col-xs-3 mui-col-sm-3 clearfix">
 				<a href="#" class="news_btn float_lf">
 					<span>10</span>
@@ -28,11 +28,21 @@
 				</a>
 				<a href="#" class="meau_dian float_rt"><img src="img/dian.png"/></a>
 			</div>
+				<!--隐藏菜单-->
+			<ul class="muea_box" style="display: none;">
+				<li><a href="#">首页</a></li>
+				<li><a href="#">线索</a></li>
+				<li><a href="#">客户</a></li>
+				<li><a href="#">商机</a></li>
+				<li><a href="#">订单</a></li>
+				<li><a href="#">财务</a></li>
+				<li><a href="#">站内消息 <span class="news_dian"></span></a></li>
+			</ul>
 		</div>
-		<div class="tabPanel">
-			<ul>
-				<li class="hit">基本信息</li>
-				<li>沟通日志</li>
+		<div class="tabPanel xiu_gai_li">
+			<ul class="tab_ul">
+				<li class="hit"><span>基本信息</span></li>
+				<li><span>沟通日志</span></li>
 			</ul>
 			<div class="panes">
 				<div class="pane" style="display:block;">
@@ -110,28 +120,120 @@
 					    <td class="td">有意向</td>
 					  </tr>
 					</table>
+					<div class="xiansuo">
+						<input type="button" value="修改" class="btn" style="background: #0062CC; color: #fff;">
+						<input type="button" value="删除" class="btn">
+						<input type="button" value="转换为客户" class="btn">
+					</div>
 				</div>
-				<div class="pane" style="padding: 20px 0;">
-					<div class="product">
-						2
+				<div class="pane" style="padding: 20px 15px;">
+					<div class="product" style="position: relative;">
+						<div class="teams">
+							<div class="t_top">关于百度百科创建</div>
+							<div class="t_middle">百科如何创建，需要准备什么内容</div>
+							<div class="t_bottom clearfix">
+								<p class="float_lf">2018-01-09 20:22:07</p>
+								<p class="float_rt"><a href="#">修改</a><a class="del_btn" href="javascript:;">删除</a></p>
+							</div>
+						</div>
+						<div class="teams">
+							<div class="t_top">关于百度百科创建</div>
+							<div class="t_middle">百科如何创建，需要准备什么内容</div>
+							<div class="t_bottom clearfix">
+								<p class="float_lf">2018-01-09 20:22:07</p>
+								<p class="float_rt"><a href="#">修改</a><a class="del_btn" href="javascript:;">删除</a></p>
+							</div>
+						</div>
+						
+						<div class="add_new">
+							<button>添加</button>
+						</div>
+					</div>
+					
+					<!--添加弹框-->
+					<div class="add_alert" style="display: none;">
+						<div class="alert_title">基本信息</div>
+						<form action="" onsubmit="return tian_jia();">
+							<div class="items">
+								<p>标题</p>
+								<p><input type="text" maxlength="50" name="" id="" value="" placeholder="50个字符以内"/></p>
+							</div>
+							<div class="items">
+								<p>内容</p>
+								<p><input type="text" name="" id="" value="" placeholder="请输入内容"/></p>
+							</div>
+							<div class="items">
+								<p>下次联系时间</p>
+								<p><input type="date" name="" id="" value=""/></p>
+							</div>
+							<div class="items">
+								<p>下次联系内容</p>
+								<p><input type="text" name="" id="" value="" placeholder="请输入内容"/></p>
+							</div>
+							<div class="btn_box">
+								<button class="add_btns">添加</button>
+								<button class="qu_xiaos">取消</button>
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>
-			<div class="xiansuo">
-			<input type="button" value="修改" class="btn" style="background: #0062CC; color: #fff;">
-			<input type="button" value="删除" class="btn">
-			<input type="button" value="转换为客户" class="btn">
 		</div>
-		</div>
+		<!--验证消息提示-->
+		<div class="yz_tishi" style="display: none;">下次联系内容不能为空！</div>
+		
 		<script src="js/mui.min.js"></script>
 		<script src="js/jquery-1.8.3.min.js"></script>
 		<script type="text/javascript">
+			$(document).ready(function(){
+				var H = $(window).height();
+				$(".xiu_gai_li").css("min-height",H-50);
+			});
 			$(function(){	
-				$('.tabPanel ul li').click(function(){
+				$('.tabPanel .tab_ul li').click(function(){
 					$(this).addClass('hit').siblings().removeClass('hit');
 					$('.panes>div:eq('+$(this).index()+')').show().siblings().hide();
 				})
 			})
+			//顶部菜单栏显示/隐藏
+			$(".meau_dian").click(function(){
+				if($(".muea_box").css("display")=="none"){
+					$(".muea_box").show();
+				}else{
+					$(".muea_box").hide();
+				}
+			});
+			
+			//主页列表删除按钮
+			$(".t_bottom p .del_btn").click(function(){
+				$(this).parents(".teams").remove();
+			});
+			
+			//主页面添加日志显示弹框
+			$(".add_new button").click(function(){
+				$(".add_alert").show();
+			});
+			//弹框添加提交按钮验证
+			function tian_jia(){
+				var inputs = $("form .items input");
+				for(var i=0;i<inputs.length;i++){
+					if($(inputs[i]).val()==""){
+						var msg = $(inputs[i]).parent().siblings("p").text();
+						$(inputs[i]).focus();
+						$(".yz_tishi").text(msg+"不能为空！");
+						$(".yz_tishi").show();
+						setTimeout(function(){
+							$(".yz_tishi").hide();
+						},3000);
+						return false;
+					}
+				}
+			}
+			//弹框取消按钮
+			$(".qu_xiaos").click(function(){
+				$(".items input").val("");
+				$(".add_alert").hide();
+			});
 		</script>
 		
 	</body>
