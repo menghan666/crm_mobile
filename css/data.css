@@ -168,12 +168,25 @@
 	background: url(../img/alert_bg.png) center no-repeat;
 	background-size: 100% 100%;
 }
+select.se-le{
+	margin-top: 5px;
+	background: url(../img/arrow.png) no-repeat scroll right center transparent;  
+}
 .down_alert input{
 	display: block;
 	width: 20px;
 	text-align: center;
 	padding-top: 10px;
 	margin: 6px 5px 0 5px;
+	color:#333;
+	float: left;
+	font-size: 14px;
+}
+.down_alert a{
+	display: block;
+	width: 100px;
+	text-align: center;
+	padding-top: 10px;
 	color:#333;
 	float: left;
 	font-size: 14px;
