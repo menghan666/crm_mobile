@@ -117,7 +117,7 @@
 
 .tabPanel ul{
 	height:45px;
-	background:#e9e9e9;
+	background:#f8f8f8;
 	margin:0 auto;
 	border-bottom: 1px solid #ddd;
 	max-width: 750px;
@@ -743,3 +743,134 @@ footer{
 
 /*线索结束*/
 
+/**********18.01.29修改样式zxt*********/
+.xiu_gai_li ul li{
+	width: 50%;
+	color:#333 !important;
+	border:none !important;
+	text-align: center;
+}
+.xiu_gai_li ul li span{
+	display: inline-block;
+	padding:0 20px;
+}
+.xiu_gai_li ul li.hit span{
+	border-bottom: 2px solid #125DA3;
+    color: #125DA3;
+}
+.tabPanel .panes .teams{
+	padding:10px 15px;
+	background-color: #f8f8f8;
+	border-radius: 5px;
+	border:1px solid #e5e5e5;
+	margin-bottom: 15px;
+}
+.tabPanel .panes .teams .t_top{
+	font-size: 1.0em;
+}
+.tabPanel .panes .teams .t_middle{
+	font-size: 0.8em;
+}
+.tabPanel .panes .teams .t_middle{
+	margin: 5px 0;
+}
+.tabPanel .panes .teams .t_bottom p{
+	color:#333;
+}
+.tabPanel .panes .teams .t_bottom p a{
+	display: inline-block;
+	font-size: 0.8em;
+}
+.tabPanel .panes .teams .t_bottom p:first-child+p a{
+	color:#125DA3;
+	border:1px solid #125DA3;
+	border-radius: 3px;
+	padding: 0px 5px;
+	margin-left: 10px;
+}
+.tabPanel .panes .teams .t_bottom p:first-child+p a:first-child{
+	color:#fff;
+	background-color: #125DA3;
+}
+.add_new {
+	width: 100%;
+	text-align: center;
+}
+.add_new button{
+	width: 200px;
+	color:#125DA3;
+	border:1px solid #125DA3;
+	border-radius: 20px; 
+	padding: 10px 0;
+	margin: 20px 0;
+}
+.add_alert{
+	width: 80%;
+	border-radius: 10px;
+	overflow: hidden;
+	position: fixed;
+	top:110px;
+	left: 10%;
+	z-index: 900;
+	box-shadow: 0 0 20px 5px #999;
+	background-color: #fff;
+}
+@media only screen and (max-width: 320px) {
+	.add_alert{
+		width: 90%;
+		left: 5%;
+	}
+}
+.add_alert .alert_title{
+	text-align: center;
+	padding: 10px 0;
+	background-color: #f8f8f8;
+	font-size: 1.2em;
+}
+.add_alert form{
+	padding:0 0 15px 0;
+	background-color: #fff;
+}
+.add_alert form .items{
+	padding: 0 15px;
+	border-bottom: 1px solid #e5e5e5;
+}
+.add_alert form .items p:first-child{
+	color:#333;
+	padding-top: 10px;
+}
+.add_alert form .items p input{
+	border:none;
+	padding: 5px 0;
+	margin: 0;
+}
+.add_alert form .btn_box{
+	text-align: center;
+	margin:20px 0 10px 0;
+}
+.add_alert form .btn_box button{
+	width: 100px;
+	border:1px solid #125DA3;
+	border-radius: 20px ;
+	padding: 5px 0;
+	text-align: center;
+	color:#125DA3;
+	margin: 0 10px;
+}
+.add_alert form .btn_box button:first-child{
+	color:#fff;
+	background-color: #125DA3;
+}
+.yz_tishi{
+	width: 58%;
+	position: fixed;
+	bottom: 100px;
+	left: 21%;
+	z-index: 1000;
+	color:#fff;
+	text-align: center;
+	box-sizing: border-box;
+	padding: 5px 15px;
+	border-radius: 8px;
+	background-color: rgba(0,0,0,0.9);
+}
