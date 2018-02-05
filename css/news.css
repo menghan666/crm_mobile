@@ -1,0 +1,157 @@
+.color_ff6400{
+	color:#ff6400;
+}
+#form_list{
+	max-width: 750px;
+	margin: 0 auto;
+	background-color: #fff;
+}
+.shai_xuan{
+	height: auto !important;
+	padding: 8px 10px;
+}
+.shai_xuan select{
+	width: 28%;
+	color:#666;
+	box-sizing: border-box;
+	margin: 0 2% 0 0;
+	font-size: 12px;
+	padding: 10px !important;
+	background: url("../img/se_bm.png") no-repeat;
+	background-size: 100% 100%;
+}
+
+.shai_xuan .search_box input{
+	background-color: #fff;
+}
+.drop_down{
+	padding:10px;
+	background-color: #fff;
+	border-bottom: 1px solid #e5e5e5;
+}
+.drop_down .inbox{
+	padding-top: 6px;
+}
+.drop_down .inbox p{
+	color:#125DA3;
+	font-size: 1em;
+	font-weight: 700;
+}
+.drop_down .inbox img{
+	width: 12px;
+	margin: 9px 0 0 5px;
+}
+.drop_down .batch a{
+	display: block;
+	text-align: center;
+	float: left;
+	font-size: 14px;
+	padding: 5px 10px;
+	border:1px solid #e5e5e5; 
+	border-radius: 20px;
+}
+.drop_down .batch a img{
+	width: 12px;
+}
+.drop_down .batch .cao_zuo{
+	color:#666;
+}
+.drop_down .batch .cao_zuo img{
+	margin: 9px 0 0 5px;
+}
+.drop_down .batch .write{
+	color:#fff;
+	padding: 5px 15px;
+	margin-left: 10px;
+	border:1px solid #125DA3;
+	background-color: #125DA3;
+}
+.drop_down .batch .write img{
+	width: 10px;
+	margin: 3px 5px 0 0;
+}
+.main_list{
+	max-width: 750px;
+	margin: 0 auto;
+	background-color: #fff;
+}
+.main_list table{
+	width: 100%;
+	text-align: left;
+}
+.main_list table tr{
+	padding: 5px 0;
+	height: 40px;
+}
+.main_list table tr:nth-child(even){
+	background-color: #f8f8f8;
+}
+.main_list table tr th{
+	font-size: 1.1em;
+}
+.main_list table tr th:first-child{
+	padding-left: 15px;
+}
+.main_list table tr .time_px{
+	color:#333 !important;
+	display: block;
+}
+.main_list table tr .time_px img{
+	height: 16px;
+	margin:3px 0 0 5px;
+}
+.main_list table tr input[type=checkbox]{
+	width: 16px;
+	height: 16px;
+	margin: 3px 5px 0 0;
+}
+.main_list table tr td:first-child{
+	padding-left: 15px;
+}
+.main_list table tr td:first-child span{
+	display: inline-block;
+	width: 160px;
+	color:#ff6400;
+}
+.inbox_alert{
+	/*padding: 0 15px;*/
+}
+.inbox_alert .inbox_items{
+	padding: 10px 15px;
+}
+.inbox_alert .inbox_items:nth-child(even){
+	background-color: #f8f8f8;
+}
+.inbox_alert .inbox_items img{
+	width: 20px;
+	margin-top: 4px;
+}
+@media only screen and (min-width: 750px) {
+	.search_box {
+	    width: 50%;
+	}
+	.shai_xuan select{
+		width: 16%;
+	}
+	.search_box button {
+	    width: 20%;
+	}
+	.search_box input{
+		width: 80%;
+	}
+	.main_list table tr td:first-child{
+		width: 500px;
+	}
+	.main_list table tr td:first-child span {
+	    display: inline-block;
+	    width: 450px;
+	    color: #ff6400;
+	}
+}
+@media only screen and (max-width: 320px) {
+	.main_list table tr td:first-child span{
+		width: 130px;
+	}
+}
+
+

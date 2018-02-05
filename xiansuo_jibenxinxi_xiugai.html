@@ -7,7 +7,12 @@
 		<link rel="stylesheet" href="css/mui.min.css" />
 		<link href="css/reset.css" rel="stylesheet" />
 		<link rel="stylesheet" href="css/new_file.css" />
+		<link rel="stylesheet" href="css/data.css" />
+		<!--三级联动-->
+		<link href="css/layout.min.css" rel="stylesheet" />
+    	<link href="css/scs.min.css" rel="stylesheet" />
 		<script type="text/javascript" src="js/jquery-1.8.3.min.js" ></script>
+		<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
 		<div class="header_box mui-row">
@@ -36,7 +41,7 @@
 				<li><a href="#">站内消息 <span class="news_dian"></span></a></li>
 			</ul>
 		</div>
-		<div class="news-pact">
+		<form class="news-pact" onsubmit="return ti_jiao();">
 			<div class="news-pact-tiele">主要信息</div>
 			<div class="news-pact-content">
 				<li style=" position: relative;">
@@ -50,11 +55,11 @@
 				</li>
 				<li>
 					<b>来源<span>*</span></b>
-					<a href="#">请选择<img src="img/jiantou.png"></a>
+					<a id="btn1" href="javascript:;">请选择<img src="img/jiantou.png"></a>
 				</li>
 				<li>
 					<b>来源人</b>
-					<a href="#">请选择<img src="img/jiantou.png"></a>
+					<a id="btn2" href="javascript:;">请选择<img src="img/jiantou.png"></a>
 				</li>
 				<li>
 					<b>联系人姓名</b>
@@ -66,11 +71,11 @@
 				</li>
 				<li>
 					<b>尊称</b>
-					<a href="#">请选择<img src="img/jiantou.png"></a>
+					<a id="btn3" href="javascript:;">请选择<img src="img/jiantou.png"></a>
 				</li>
 				<li>
-					<b>手机</b>
-					<p><input type="text" placeholder="请输入" class="inp"></p>
+					<b>手机<span>*</span></b>
+					<p><input type="text" placeholder="请输入" class="inp user_tel"></p>
 				</li>
 				<li>
 					<b>邮箱</b>
@@ -78,7 +83,12 @@
 				</li>
 				<li>
 					<b>地址</b>
-					<a href="#">请选择<img src="img/jiantou.png"></a>
+					<!--<a href="javascript:;">请选择<img src="img/jiantou.png"></a>-->
+					<!--选择地址-->
+					<div class="choose_ads" style="width: 100% !important;border:none !important;">
+						<input type="text" style="margin: 0 !important;border:none !important;" readonly placeholder="请选择" id="myAddrs" name="addr" data-key="4-84-1298" value="" />
+						<img style="top:12px !important;" class="" src="img/right_jt.png"/>
+					</div>
 					<p><input type="text" placeholder="请输入街道信息" class="inp"></p>
 				</li>
 				<li>
@@ -109,12 +119,119 @@
 					<p><input type="text" placeholder="请输入" class="inp"></p>
 				</li>
 				<li>
-					<input type="button" value="保存" class="btn">
+					<input type="submit" value="保存" class="btn">
 					<input type="button" value="返回" class="btn" style="background: #f8f8f8; color: #333;">
 				</li>
 			</div>
-		</div>
+		</form>
+		
+		<form class="hide_box" style="display: none;">
+			<!--来源-->
+			<div class="hide_list list1" style="display: none;">
+				<ul class="hangye_ul">
+					<li class="clearfix">
+						<input class="float_lf" type="radio" name="hangye" id="hy1" value="" />
+						<label for="#hy1" class="float_lf">独立开发</label>
+					</li>
+					<li class="clearfix">
+						<input class="float_lf" type="radio" name="hangye" id="hy2" value="" />
+						<label for="#hy2" class="float_lf">平台注册</label>
+					</li>
+					<li class="clearfix">
+						<input class="float_lf" type="radio" name="hangye" id="hy3" value="" />
+						<label for="#hy3" class="float_lf">平台咨询</label>
+					</li>
+					<li class="clearfix">
+						<input class="float_lf" type="radio" name="hangye" id="hy3" value="" />
+						<label for="#hy3" class="float_lf">自媒体</label>
+					</li>
+					<li class="clearfix">
+						<input class="float_lf" type="radio" name="hangye" id="hy3" value="" />
+						<label for="#hy3" class="float_lf">展业助手</label>
+					</li>
+					<li class="clearfix">
+						<input class="float_lf" type="radio" name="hangye" id="hy3" value="" />
+						<label for="#hy3" class="float_lf">鸟哥笔记</label>
+					</li>
+					<li class="clearfix">
+						<input class="float_lf" type="radio" name="hangye" id="hy3" value="" />
+						<label for="#hy3" class="float_lf">阿里云</label>
+					</li>
+					<li class="clearfix">
+						<input class="float_lf" type="radio" name="hangye" id="hy3" value="" />
+						<label for="#hy3" class="float_lf">平台咨询</label>
+					</li>
+					<li class="clearfix">
+						<input class="float_lf" type="radio" name="hangye" id="hy3" value="" />
+						<label for="#hy3" class="float_lf">镖狮网</label>
+					</li>
+					<li class="clearfix">
+						<input class="float_lf" type="radio" name="hangye" id="hy3" value="" />
+						<label for="#hy3" class="float_lf">400热线</label>
+					</li>
+					<li class="clearfix">
+						<input class="float_lf" type="radio" name="hangye" id="hy3" value="" />
+						<label for="#hy3" class="float_lf">亿蜂网</label>
+					</li>
+					
+				</ul>
+				
+		
+				<!--按钮-->
+				<div class="hide_inbtn">
+					<button type="button" class="qu_xiao">取消</button>
+					<button class="sure_but">确定</button>
+				</div>
+			</div>
+			<!--来源人-->
+			<div class="hide_list list2" style="display: none;">
+				<ul class="hangye_ul">
+					<li class="clearfix">
+						<input class="float_lf" type="radio" name="hangye" id="hy1" value="" />
+						<label for="#hy1" class="float_lf">教育/培训</label>
+					</li>
+					<li class="clearfix">
+						<input class="float_lf" type="radio" name="hangye" id="hy2" value="" />
+						<label for="#hy2" class="float_lf">电子商务</label>
+					</li>
+					<li class="clearfix">
+						<input class="float_lf" type="radio" name="hangye" id="hy3" value="" />
+						<label for="#hy3" class="float_lf">对外贸易</label>
+					</li>
+				</ul>
+				<!--按钮-->
+				<div class="hide_inbtn">
+					<button type="button" class="qu_xiao">取消</button>
+					<button class="sure_but">确定</button>
+				</div>
+			</div>
+			<!--尊称-->
+			<div class="hide_list list3" style="display: none;">
+				<ul class="hangye_ul">
+					<li class="clearfix">
+						<input class="float_lf" type="radio" name="money" id="yye1" value="" />
+						<label for="#yye1" class="float_lf">先生</label>
+					</li>
+					<li class="clearfix">
+						<input class="float_lf" type="radio" name="money" id="yye2" value="" />
+						<label for="#yye2" class="float_lf">女士</label>
+					</li>
+				</ul>
+				<!--按钮-->
+				<div class="hide_inbtn">
+					<button type="button" class="qu_xiao">取消</button>
+					<button class="sure_but">确定</button>
+				</div>
+			</div>
+		</form>
+		<!--三级联动-->
+		<script src="js/jquery.scs.min.js"></script>
+    	<script src="js/CNAddrArr.min.js"></script>
 		<script>
+			$(document).ready(function(){
+				var H = $(window).height();
+				$(".hide_box").css("min-height",(H-50));
+			});
 			$(".meau_dian").click(function(){
 				if($(".muea_box").css("display")=="none"){
 					$(".muea_box").show();
@@ -122,6 +239,158 @@
 					$(".muea_box").hide();
 				}
 			});
+			
+			//显示隐藏内容
+			$(".news-pact-content").on("click","li a",function(){
+				if($(this).attr("id") !==undefined){
+//					$(".header_box").addClass("header_fixed");
+					$(".news-pact").hide();
+					//获取被点击按钮id里的数字
+					var IDs = $(this).attr("id").replace(/[^0-9]/ig,"");
+					$(".hide_box").show().children(".list"+IDs+"").show();
+				}
+			});
+			//点击取消按钮
+			$(".hide_inbtn").on("click",".qu_xiao",function(){
+//				$(".header_box").removeClass("header_fixed");
+				$(this).parents(".hide_list").hide();
+				$(this).parents(".hide_box").hide();
+				$(".news-pact").show();
+			});
+			
+			//提交
+			function ti_jiao(){
+				if($("#btn1").text()=="请选择"){
+					mui.toast("来源不能为空！");
+					return false;
+				}else if($(".user_tel").val()==""){
+					$(".user_tel").focus();
+					mui.toast("手机号不能为空！");
+					return false;
+				}
+			}
+			
+		</script>
+		<script>
+		    $(function() {
+		        /**
+		         * 通过数组id获取地址列表数组
+		         *
+		         * @param {Number} id
+		         * @return {Array} 
+		         */ 
+		        function getAddrsArrayById(id) {
+		            var results = [];
+		            if (addr_arr[id] != undefined)
+		                addr_arr[id].forEach(function(subArr) {
+		                    results.push({
+		                        key: subArr[0],
+		                        val: subArr[1]
+		                    });
+		                });
+		            else {
+		                return;
+		            }
+		            return results;
+		        }
+		        /**
+		         * 通过开始的key获取开始时应该选中开始数组中哪个元素
+		         *
+		         * @param {Array} StartArr
+		         * @param {Number|String} key
+		         * @return {Number} 
+		         */         
+		        function getStartIndexByKeyFromStartArr(startArr, key) {
+		            var result = 0;
+		            if (startArr != undefined)
+		                startArr.forEach(function(obj, index) {
+		                    if (obj.key == key) {
+		                        result = index;
+		                        return false;
+		                    }
+		                });
+		            return result;
+		        }
+		
+		        //bind the click event for 'input' element
+		        $("#myAddrs").click(function() {
+		            var PROVINCES = [],
+		                startCities = [],
+		                startDists = [];
+		            //Province data，shall never change.
+		            addr_arr[0].forEach(function(prov) {
+		                PROVINCES.push({
+		                    key: prov[0],
+		                    val: prov[1]
+		                });
+		            });
+		            //init other data.
+		            var $input = $(this),
+		                dataKey = $input.attr("data-key"),
+		                provKey = 1, //default province 北京
+		                cityKey = 36, //default city 北京
+		                distKey = 37, //default district 北京东城区
+		                distStartIndex = 0, //default 0
+		                cityStartIndex = 0, //default 0
+		                provStartIndex = 0; //default 0
+		
+		            if (dataKey != "" && dataKey != undefined) {
+		                var sArr = dataKey.split("-");
+		                if (sArr.length == 3) {
+		                    provKey = sArr[0];
+		                    cityKey = sArr[1];
+		                    distKey = sArr[2];
+		
+		                } else if (sArr.length == 2) { //such as 台湾，香港 and the like.
+		                    provKey = sArr[0];
+		                    cityKey = sArr[1];
+		                }
+		                startCities = getAddrsArrayById(provKey);
+		                startDists = getAddrsArrayById(cityKey);
+		                provStartIndex = getStartIndexByKeyFromStartArr(PROVINCES, provKey);
+		                cityStartIndex = getStartIndexByKeyFromStartArr(startCities, cityKey);
+		                distStartIndex = getStartIndexByKeyFromStartArr(startDists, distKey);
+		            }
+		            var navArr = [{//3 scrollers, and the title and id will be as follows:
+		                title: "省",
+		                id: "scs_items_prov"
+		            }, {
+		                title: "市",
+		                id: "scs_items_city"
+		            }, {
+		                title: "区",
+		                id: "scs_items_dist"
+		            }];
+		            SCS.init({
+		                navArr: navArr,
+		                onOk: function(selectedKey, selectedValue) {
+		                    $input.val(selectedValue).attr("data-key", selectedKey);
+		                }
+		            });
+		            var distScroller = new SCS.scrollCascadeSelect({
+		                el: "#" + navArr[2].id,
+		                dataArr: startDists,
+		                startIndex: distStartIndex
+		            });
+		            var cityScroller = new SCS.scrollCascadeSelect({
+		                el: "#" + navArr[1].id,
+		                dataArr: startCities,
+		                startIndex: cityStartIndex,
+		                onChange: function(selectedItem, selectedIndex) {
+		                    distScroller.render(getAddrsArrayById(selectedItem.key), 0); //re-render distScroller when cityScroller change
+		                }
+		            });
+		            var provScroller = new SCS.scrollCascadeSelect({
+		                el: "#" + navArr[0].id,
+		                dataArr: PROVINCES,
+		                startIndex: provStartIndex,
+		                onChange: function(selectedItem, selectedIndex) { //re-render both cityScroller and distScroller when provScroller change
+		                    cityScroller.render(getAddrsArrayById(selectedItem.key), 0);
+		                    distScroller.render(getAddrsArrayById(cityScroller.getSelectedItem().key), 0);
+		                }
+		            });
+		        });
+		    });
 		</script>
 	</body>
 </html>

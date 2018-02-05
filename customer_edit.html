@@ -125,8 +125,8 @@
 				</div>
 				
 			</form>
-			
-			<form class="hide_box" style="display: none;">
+		</div>
+		<form class="hide_box" style="display: none;">
 				<!--首要联系人-->
 				<div class="hide_list list1" style="display: none;">
 					<div class="shai_xuans clearfix">
@@ -284,9 +284,6 @@
 					</div>
 				</div>
 			</form>
-			
-		</div>
-		
 		
 		<script src="js/jquery-1.8.3.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/mui.min.js"></script>
@@ -310,7 +307,8 @@
 			});
 			//显示隐藏内容
 			$("#form_box ul").on("click","li a",function(){
-				$(".header_box").addClass("header_fixed");
+//				$(".header_box").addClass("header_fixed");
+				$(".edit_main").hide();
 				//获取被点击按钮id里的数字
 				var IDs = $(this).attr("id").replace(/[^0-9]/ig,"");
 				$(".hide_box").show().children(".list"+IDs+"").show();
@@ -318,9 +316,10 @@
 			
 			//点击取消按钮
 			$(".hide_inbtn").on("click",".qu_xiao",function(){
-				$(".header_box").removeClass("header_fixed");
+//				$(".header_box").removeClass("header_fixed");
 				$(this).parents(".hide_list").hide();
 				$(this).parents(".hide_box").hide();
+				$(".edit_main").show();
 			});
 			
 			//提交

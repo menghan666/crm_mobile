@@ -711,10 +711,10 @@ footer ul li a p{
 
 .hide_box{
 	width: 100%;
-	position: fixed;
+	/*position: fixed;
 	top:50px;
 	left:0;
-	z-index: 1000;
+	z-index: 1000;*/
 	background-color: #fff;
 }
 .hide_list{
@@ -761,7 +761,7 @@ footer ul li a p{
 	background-color: #f0f0f0;
 }
 .search_box button img{
-	width: 80%;
+	width: 20px;
 	display: block;
 	margin: 0 auto;
 }
@@ -787,7 +787,7 @@ footer ul li a p{
 }
 .list_content td input{
 	display: block;
-	width:80%;
+	width:64%;
 	height: 26px;
 	border-radius: 0 !important;
 	margin: 2px auto 0 auto;
@@ -824,8 +824,8 @@ footer ul li a p{
 }
 .hangye_ul li input{
 	display: block;
-	width: 20px !important;
-	height: 20px;
+	width: 18px !important;
+	height: 18px;
 }
 .hangye_ul li label{
 	display: block;
