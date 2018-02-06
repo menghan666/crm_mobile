@@ -118,29 +118,72 @@
 					</tr>
 				</table>
 				<!--收件箱弹框-->
-				<div class="inbox_alert" style="display: none;">
+				<div class="inbox_alert ib_show" style="display: none;">
 					<div class="inbox_items clearfix">
-						<p class="color-333 float_lf">收件箱(<span class="color_ff6400">41</span>/52)</p>
-						<img class="float_rt" src="img/dj.png" alt="" />
+						<p class="color-333 float_lf"><button>收件箱(<span class="color_ff6400">41</span>/52)</button></p>
+						<img src="img/dj.png" alt="" />
 					</div>
 					<div class="inbox_items clearfix">
-						<p class="float_lf">发件箱(100)</p>
-						<img class="float_rt" src="img/dj.png" alt="" style="display: none;"/>
+						<p class="float_lf"><button class="push_box">发件箱(100)</button></p>
+						<img src="img/dj.png" alt="" style="display: none;"/>
 					</div>
 				</div>
-				<!--批量操作-->
-				<div class="inbox_alert" style="display: none;">
+				<!--批量操作弹框-->
+				<div class="inbox_alert cz_show" style="display: none;">
 					<div class="inbox_items clearfix">
-						<p class="color-333 float_lf">收件箱(<span class="color_ff6400">41</span>/52)</p>
-						<img class="float_rt" src="img/dj.png" alt="" />
+						<p class="color-333 float_lf"><button class="pi_liang">批量删除</button></p>
+						<img src="img/dj.png" alt="" />
 					</div>
 					<div class="inbox_items clearfix">
-						<p class="float_lf">发件箱(100)</p>
-						<img class="float_rt" src="img/dj.png" alt="" style="display: none;"/>
+						<p class="float_lf"><button class="set_yidu">设置已读</button></p>
+						<img src="img/dj.png" alt="" style="display: none;"/>
 					</div>
 				</div>
 			</div>
 		</form>
+		<!--写信弹框-->
+		<form action="" id="write_letter" onsubmit="return write_letter();" style="display: none;">
+			<div class="box_title">写信</div>
+			<div class="teams company_teams">
+				<ul class="clearfix">
+					<li><a href="javascript:;">管理</a></li>
+					<li><a href="javascript:;">商务部</a></li>
+					<li><a href="javascript:;">研发部</a></li>
+					<li><a href="javascript:;">客服部</a></li>
+					<li><a href="javascript:;">综合部</a></li>
+					<li><a href="javascript:;">人事部</a></li>
+					<li><a href="javascript:;">商务一组</a></li>
+					<li><a href="javascript:;">商务北京</a></li>
+					<li><a href="javascript:;">商务二组</a></li>
+					<li><a href="javascript:;">客服A组</a></li>
+					<li><a href="javascript:;">客服B组</a></li>
+					<li><a href="javascript:;">客服C组</a></li>
+					<li><a href="javascript:;">运营部</a></li>
+					<li><a href="javascript:;">财务部</a></li>
+				</ul>
+			</div>
+			<div class="shou_jian">
+				<p>选择收件人<span>*</span></p>
+				<div class="teams_list">
+					<ul class="teams clearfix">
+						<div class="all_div clearfix"><input type="checkbox" name="" id="all_btn" value="" /><label for="all_btn">全部选择</label></div>
+						<li class="clearfix"><input type="checkbox" name="" id="mjx1" value="" /><label for="mjx1">媒介匣G【管理团队】</label></li>
+						<li class="clearfix"><input type="checkbox" name="" id="mjx2" value="" /><label for="mjx2">高总【管理团队】</label></li>
+						<li class="clearfix"><input type="checkbox" name="" id="mjx3" value="" /><label for="mjx3">王志维【销售总监】</label></li>
+						<li class="clearfix"><input type="checkbox" name="" id="mjx4" value="" /><label for="mjx4">张静【管理团队】</label></li>
+						<li class="clearfix"><input type="checkbox" name="" id="mjx5" value="" /><label for="mjx5">研发测试【管理团队】</label></li>
+					</ul>
+				</div>
+			</div>
+			<div class="write_content">
+				<p>内容<span>*</span></p>
+				<textarea name="" rows="" cols=""></textarea>
+			</div>
+			<div class="form_btn">
+				<button type="submit" class="">发送</button>
+				<button type="reset" class="qx_btn">取消</button>
+			</div>
+		</form> 
 		<script src="js/mui.min.js"></script>
 		<script type="text/javascript">
 			mui.init()
@@ -178,15 +221,84 @@
 			})
 			//点击收件箱
 			$(".inbox").click(function(){
-				if($("#table_list").css("display") !=="none"){
-					$("#table_list").hide();
-					$(".inbox_alert").show();
-				}else{
+				if($(".cz_show").css("display") !=="none"){
+					$(".cz_show").hide();
+					$(".ib_show").show();
+				}else if($(".ib_show").css("display") !=="none"){
+					$(".ib_show").hide();
 					$("#table_list").show();
-					$(".inbox_alert").hide();
+				}else{
+					$("#table_list").hide();
+					$(".ib_show").show();
+				}
+			})
+			//点击批量操作
+			$(".cao_zuo").click(function(){
+				$("#table_list").hide();
+				if($(".ib_show").css("display") !=="none"){
+					$(".ib_show").hide();
+					$(".cz_show").show();
+				}else if($(".cz_show").css("display") !=="none"){
+					$(".cz_show").hide();
+					$("#table_list").show();
+				}else{
+					$("#table_list").hide();
+					$(".cz_show").show();
+				}
+			})
+			//点击写信按钮显示弹框
+			$(".write").click(function(){
+				$("#write_letter").show();
+			});
+			//点击选择团队
+			$(".company_teams ul li").on("click","a",function(){
+				if(!$(this).hasClass("click_act")){
+					$(this).addClass("click_act");
+					$(this).parent().siblings("li").children("a").removeClass("click_act");
+				}else{
+					$(this).removeClass("click_act");
+				}
+				
+			});
+			//分享弹框--全选功能
+			$("#all_btn").click(function(){
+				if($(this).prop("checked")){
+					$(this).prop("checked","checked");
+					$(".teams input[type=checkbox]").prop("checked","checked");
+				}else{
+					$(this).removeProp("checked");
+					$(".teams input[type=checkbox]").removeProp("checked");
+				}
+			});
+			//如果团队全部选中则全选按钮选中 否则全选按钮不选中
+			$(".teams li").on("click","input",function(){
+				var list_num = $(".teams li input[type=checkbox]").length;
+				if($(".teams li input:checked").length==list_num){
+					$("#all_btn").attr("checked","checked");
+				}else{
+					$("#all_btn").removeAttr("checked");
 				}
 			})
 			
+			//提交验证
+			function write_letter(){
+				if($(".shou_jian ul li input[type=checkbox]:checked").length==0){
+					mui.toast("请选择收件人！");
+					return false;
+				}else if($(".write_content textarea").val()==""){
+					mui.toast("请输入内容！");
+					$(".write_content textarea").focus();
+					return false;
+				}
+			}
+			//点击取消按钮清空表单并隐藏弹框
+			$(".qx_btn").click(function(){
+				console.log($(".shou_jian").find("input[type=checkbox]").length);
+				$(".company_teams ul li a").removeClass("click_act");
+				$(".teams input[type=checkbox]").removeProp("checked");
+				$(".write_content textarea").val("");
+				$("#write_letter").hide();
+			});
 		</script>
 	</body>
 

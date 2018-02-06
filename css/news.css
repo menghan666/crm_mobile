@@ -117,15 +117,138 @@
 	/*padding: 0 15px;*/
 }
 .inbox_alert .inbox_items{
-	padding: 10px 15px;
+	padding: 0 15px;
+	position: relative;
 }
 .inbox_alert .inbox_items:nth-child(even){
 	background-color: #f8f8f8;
 }
 .inbox_alert .inbox_items img{
 	width: 20px;
-	margin-top: 4px;
+	position: absolute;
+	top:14px;
+	right:20px;
 }
+.inbox_alert .inbox_items p{
+	width: 100%;
+}
+.inbox_alert .inbox_items p button{
+	width: 100%;
+	padding: 10px 0;
+	text-align: left;
+	border:none;
+}
+.inbox_alert .inbox_items p .push_box,
+.inbox_alert .inbox_items p .set_yidu{
+	background-color: #f8f8f8;
+}
+#write_letter{
+	width: 90%;
+	height: 80%;
+	position: fixed;
+	top:60px;
+	left:5%;
+	z-index: 1100;
+	overflow: hidden;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 0 10px 5px #ccc;
+	overflow-y: scroll;
+}
+#write_letter::-webkit-scrollbar{
+	width:0;
+	background-color: #ccc;
+}
+#write_letter .box_title{
+	padding: 10px 0;
+	text-align: center;
+	font-size: 16px;
+	background-color: #f8f8f8;
+}
+#write_letter .teams{
+	padding:0 10px;
+}
+#write_letter .teams ul{
+	text-align: left;
+	padding: 15px 0;
+	border-bottom: 1px solid #e5e5e5;
+}
+#write_letter .teams ul li{
+	display: inline-block;
+	width: 22%;
+	margin:0 1% 5px 1%;
+}
+#write_letter .teams ul li a{
+	display: block;
+	width: 100%;
+	padding: 3px 0;
+	color:#333;
+	text-align: center;
+	border-radius: 5px;
+	border:1px solid #e5e5e5;
+}
+.click_act{
+	color:#fff !important;
+	background-color: #0062CC;
+	border:1px solid #0062CC;
+}
+.shou_jian {
+	margin-bottom: 20px;
+}
+.shou_jian p,.write_content p{
+	text-align: center;
+	font-size: 16px;
+	padding: 10px 0;
+	color:#333;
+}
+.shou_jian p span,.write_content p span{
+	color:#DD524D;
+}
+.shou_jian .teams_list .teams li{
+	float: left;
+	width: 50%;
+	margin-top: 5px;
+}
+.shou_jian .teams_list .teams li input{
+	width: 16px;
+	height: 16px;
+	margin:2px 5px 0 0;
+	float: left;
+}
+.shou_jian .teams_list .teams li label{
+	float: left;
+	font-size: 12px;
+}
+.write_content{
+	border-top: 1px solid #e5e5e5;
+}
+.write_content textarea{
+	display: block;
+	width: 90%;
+	min-height: 80px;
+	padding: 10px;
+	margin: 10px auto;
+}
+.form_btn {
+	text-align: center;
+	padding: 20px 0;
+}
+.form_btn button{
+	width: 100px;
+	text-align: center;
+	padding: 5px;
+	border-radius: 20px;
+	margin: 0 5px;
+	border:1px solid #e5e5e5;
+}
+.form_btn button:first-child{
+	color:#fff;
+	border:1px solid #0062CC;
+	background-color: #0062CC;
+}
+
+
+
 @media only screen and (min-width: 750px) {
 	.search_box {
 	    width: 50%;
@@ -151,6 +274,13 @@
 @media only screen and (max-width: 320px) {
 	.main_list table tr td:first-child span{
 		width: 130px;
+	}
+	#write_letter .teams ul li{
+		width: 30%;
+	}
+	.shou_jian .teams_list .teams li{
+		float: left;
+		width: 55%;
 	}
 }
 
